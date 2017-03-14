@@ -1,209 +1,211 @@
-a	eɪ	ей
-a	æ	э
-a	ɑ|ɑː	а
-a	ə	а
-a	ɪ	и
-a	iː	и́
-a	ɔ	о
-a	ɔː	о́
-ae|æ	iː	и́
-ae|æ	æ	а
-aer|ær	ɑː	ар
-ai|ay	eɪ	ей
-ai|ay	ɪ|iː	и
-ai	ə	е
-ai	-	е
-air|aire|ayr	ɛə	ер
-al[C]	ɔː	о́
-al[C]	ɔːl	о́л
-al[C]	æl	ал
-ar|are	ɑː	ар
-ar|are	ær	ар
-ar|are	ɛə|ɛər	ер
-au|aw	ɔ	о
-au|aw	ɔː|оː	о́
-b	b	б
-b	-	-
-c	s	с
-c	k	к
-c	ʃ	ш
-ch	ʧ	ч
-ch	ʤ	дж
-ch	k	к
-ch	ʃ	ш
-ch	x	х
-ck	k	к
-d	d	д
-d	-	-
-e	iː	и́
-e	e|ə	е
-e	ɪ	и
-e	-	-
-ea	iː	и́
-ea	ɪ	и
-ea	e	е
-ea	eɪ	ей
-ea	ɪə	иа
-ear	ə	ер
-ear	ɛə	ер
-ear	ɪə	ир
-ee	iː	и́
-eer	ɪə	ир
-ei	iː	и́
-ei	ɪ	и
-ei	aɪ	ай
-ei	eɪ	ей
-eigh	aɪ	ай
-eigh	eɪ	ей
-eir	ɪə	ир
-eo	iː	и́
-eo	ɪ	и
-eo	e	е
-eo	ə	е
-er	ɜː|ə	ер
-er	ɑː	ар
-ere	ɪə	ир
-eu|ew	juː	ью́
-eu|ew	ju	ью
-eu|ew	uː	у́
-ewe	ju|juə	ью
-ewe	ouə	оуэ
-ewer	ju|juə	ьюр
-ewer	ouə	оуэ
-ey	iː	и́
-ey	ɪ	и
-ey	eɪ	ей
-f	f	ф
-f	v	в
-g	g	г
-g	ʤ	дж
-g	ʒ	ж
-gn	n	н
-gg	g	гг
-gg	ʤ	дж
-gg	ʒ	ж
-gh	f	ф
-gh	gh	гх
-gh	-	-
-h	h	х
-h	-	-
-i	aɪ	ай
-i	ɪ	и
-i	iː	и́
-ia	aɪə	айа
-ia	ɪə	иа
-iar	aɪə	айар
-ie	aɪə	айе
-ie	ɪ	и
-ie	iː	и́
-ier	aɪə|aɪər	айер
-ier	ɪə|ɪər	ир
-igh	aɪ	ай
-igh	ɪgh	игх
-io	ə	е
-io	-	е
-io	aɪə	айо
-io	ɪɔ|ɪə	ио
-ir	ɜː	ёр
-ir	ɪə	ир
-ire	aɪə	айр
-ire	ɪə	ир
-irr	ɪr	ирр
-j	ʤ	дж
-k	k	к
-kn	n	н
-l	l	л
-l	-   -
-ll	l	л
-m	m	м
-m	-   м
-mpb	mb	мб
-n	n|ŋ	н
-ng	ŋ	нг
-o	ou|əu	оу
-o	ɔ|ə|o|ʌ	о
-o	ɔː	о́
-oa	ou|əu	оу
-oa	ɔː	о́
-oar	ɔː|ə|ɔəː	ор
-oe|œ	iː	и́
-oi|oy	ɔɪ	ой
-oid	ɔɪd	оид
-oo	u	у
-oo	uː	у́
-oo	ʌ	а
-oor|oore	ɔː|ɔəː	ор
-oor|oore	uə	ур
-or	ɔː|ə	ор
-or	əː	эр
-ore	ɔː|ɔəː	ор
-ou	ʌ	а
-ou	ou|əu|o	оу
-ou	au	ау
-ou	u	у
-ough	au	ау
-ough	ʌf	аф
-ough	ɔh|oh	ох
-our	ɔː|ə|ɔəː	ор
-our	auə	аур
-our	ɜː	ер
-ow	ou	оу
-ow	au	ау
-ow	ɔː	о́
-ower	auə	ауэр
-ower	ouə	оуэр
-p	p	п
-p	-	-
-ph	f	ф
-ph	ph	пх
-q	k	к
-qu	k	к
-qu	kw	кў
-r	r	р
-r	-	р
-s	s	с
-s	z	з
-s	ʃ	ш
-s	ʒ	ж
-s	-	-
-sh	ʃ	ш
-sh	sh	сх
-ss	s	с
-ss	z	з
-t	t	т
-t	ʃ	ш
-t	ʧ	ч
-t	-	-
-tch	ʧ	тч
-th	t	т
-th	θ	т̈
-th	ð	д̈
-th	th	тх
-ts	ts	тс
-tz	ts	ц
-u	juː	ью́
-u	u	у
-u	uː	у́
-u	ʌ	а
-u	ə	у
-u	-	-
-u	ɪ	и
-ue	e	е
-ue	-	-
-ui	ɪ	и
-ur	ɜː|ə	ер
-v	v	в
-w	w	ў
-w	v	в
-w	-	-
-wor	wɜː	ўӭр
-x	ks	кс
-x	gz	гз
-x	z	з
-y	ɪ	и
-y	aɪ	ай
-y	j	й
-yr	əː	ёр
-z	z	з
-z	ts	ц
-z	s|θ	с
+a = EY  = ей
+a = AE = э
+a = AO|AA = а
+a = AH = а
+a = IH = и
+a = IY = и́
+a = AO|AA = о
+ae|æ = IY = и́
+ae|æ = AE = а
+aer|ær = AA R = ар
+ai|ay = EY  = ей
+ai|ay = IH = и
+ai|ay = IY = и́
+ai = AH = е
+ai = - = е
+air|aire|ayr = EH R = ер
+al[C] = ɔː = о́
+al[C] = ɔːl = о́л
+al[C] = AEl = ал
+ar|are = ɑː = ар
+ar|are = AEr = ар
+ar|are = EH R|EA = ер
+au|aw = AA = о
+au|aw = AW = о́
+b = B = б
+bb = B = бб
+b = - = -
+c = S = с
+c = K = к
+сc = K = кк
+c = SH = ш
+ch = CH = ч
+ch = JH = дж
+ch = K = к
+ch = SH = ш
+ck = K = к
+d = D = д
+d = - = -
+e = IY = и́
+e = EH|AH = е
+e = IH = и
+e = - = -
+ea = IY = и́
+ea = IH = и
+ea = EH = е
+ea = EY  = ей
+ea = ɪAH = иа
+ear = AH = ер
+ear = EH R = ер
+ear = IY R|IA = ир
+ee = IY = и́
+eer = IY R|IA = ир
+ei = IY = и́
+ei = IH = и
+ei = AY = ай
+ei = EY  = ей
+eigh = AY = ай
+eigh = EY  = ей
+eir = IY R|IA = ир
+eo = IY = и́
+eo = IH = и
+eo = e = е
+eo = AH = е
+er = ɜː|AH = ер
+er = AA R|AA = ар
+ere = IY R|IA = ир
+eu|ew = juː = ью́
+eu|ew = ju = ью
+eu|ew = uː = у́
+ewe = ju|juAH = ью
+ewe = ouAH = оуэ
+ewer = ju|juAH = ьюр
+ewer = ouAH = оуэ
+ey = IY = и́
+ey = IH = и
+ey = EY  = ей
+f = f = ф
+f = v = в
+g = g = г
+g = ʤ = дж
+g = ʒ = ж
+gn = n = н
+gg = g = гг
+gg = ʤ = дж
+gg = ʒ = ж
+gh = f = ф
+gh = gh = гх
+gh = - = -
+h = h = х
+h = - = -
+i = - = -
+i = AY = ай
+i = IH = и
+i = IY = и́
+ia = AY AH|AY AE = айа
+ia = AY AH|AY AE = иа
+iar = AY ER|AY AH = айар
+ie = AY AH = айе
+ie = IH = и
+ie = IY = и́
+ier = AY ER|AY AH = = айер
+ier = IY R|IA = ир
+igh = AY = ай
+igh = ɪgh = игх
+io = AH = е
+io = - = е
+io = aɪAH = айо
+io = ɪɔ|ɪAH = ио
+ir = ɜː = ёр
+ir = ɪAH = ир
+ire = aɪAH = айр
+ire = ɪAH = ир
+irr = ɪr = ирр
+j = ʤ = дж
+k = k = к
+kn = n = н
+l = l = л
+l = -   -
+ll = l = л
+m = m = м
+m = -   м
+mpb = mb = мб
+n = n|ŋ = н
+ng = ŋ = нг
+o = ou|AHu = оу
+o = ɔ|AH|o|ʌ = о
+o = ɔː = о́
+oa = ou|AHu = оу
+oa = ɔː = о́
+oar = ɔː|AH|ɔAHː = ор
+oe|œ = IY = и́
+oi|oy = ɔɪ = ой
+oid = ɔɪd = оид
+oo = u = у
+oo = uː = у́
+oo = ʌ = а
+oor|oore = ɔː|ɔAHː = ор
+oor|oore = uAH = ур
+or = ɔː|AH = ор
+or = AHː = эр
+ore = ɔː|ɔAHː = ор
+ou = ʌ = а
+ou = ou|AHu|o = оу
+ou = au = ау
+ou = u = у
+ough = au = ау
+ough = ʌf = аф
+ough = ɔh|oh = ох
+our = ɔː|AH|ɔAHː = ор
+our = auAH = аур
+our = ɜː = ер
+ow = ou = оу
+ow = au = ау
+ow = ɔː = о́
+ower = auAH = ауэр
+ower = ouAH = оуэр
+p = p = п
+p = - = -
+ph = f = ф
+ph = ph = пх
+q = k = к
+qu = k = к
+qu = kw = кў
+r = r = р
+r = - = р
+s = s = с
+s = z = з
+s = ʃ = ш
+s = ʒ = ж
+s = - = -
+sh = ʃ = ш
+sh = sh = сх
+ss = s = с
+ss = z = з
+t = t = т
+t = ʃ = ш
+t = ʧ = ч
+t = - = -
+tch = ʧ = тч
+th = t = т
+th = θ = т̈
+th = ð = д̈
+th = th = тх
+ts = ts = тс
+tz = ts = ц
+u = juː = ью́
+u = u = у
+u = uː = у́
+u = ʌ = а
+u = AH = у
+u = - = -
+u = IH = и
+ue = e = е
+ue = - = -
+ui = IH = и
+ur = ɜː|AH = ер
+v = v = в
+w = w = ў
+w = v = в
+w = - = -
+wor = wɜː = ўӭр
+x = ks = кс
+x = gz = гз
+x = z = з
+y = IH = и
+y = AY = ай
+y = j = й
+yr = AHː = ёр
+z = z = з
+z = ts = ц
+z = s|θ = с

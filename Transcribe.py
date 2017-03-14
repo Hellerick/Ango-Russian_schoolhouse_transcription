@@ -14,7 +14,20 @@ English_alphabet = 'abcdefghijklmnopqrstuvwxyzëéï'
 
 
 def convert_text(text):
+    # make-wordlist
+    # convert by user dictionary
+    # make dictionary based on US, then on UK dictionary; convert
+    # try convert by word-breaking
     pass
+
+
+def make_local_dictionary(file_path, word_list):
+    local_dict_path = re.sub(r'\.[a-z]+\Z', '.Dictionary.txt', file_path)
+    user_dict_path = os.path.join(project_path, 'Dictionaries', 'User_dict.txt')
+    US_dict_path = os.path.join(project_path, 'Dictionaries', 'cmudict.0.7a')
+    UK_dict_path = os.path.join(project_path, 'Dictionaries', 'beep-1.0')
+    pass
+
 
 def convert_file(file_path):
     with open(file_path, mode='rt', encoding='utf8') as f:
@@ -24,12 +37,13 @@ def convert_file(file_path):
     word_list = list()
     for n, text in enumerate(code):
         if n%2 == 0:
-            local_list = re.findall('[+English_alphabet+’]*['+English_alphabet+']', text)
+            local_list = re.findall('['+English_alphabet+'’]*['+English_alphabet+']', text.lower())
             word_list += local_list
     word_list = sorted(list(set(word_list)))
-    word_list_path = re.sub(r'\.[a-z]+\Z', 'WordList.txt', file_path)
+    word_list_path = re.sub(r'\.[a-z]+\Z', '.WordList.txt', file_path)
     with open(word_list_path, 'wt', encoding='utf8') as word_list_file:
         word_list_file.write('\n'.join(word_list))
+    make_local_dictionary(file_path, word_list)
     for n, text in enumerate(code):
         if n%2 == 0:
             code[n] = convert_text(text)
