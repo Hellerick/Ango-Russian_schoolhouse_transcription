@@ -61,10 +61,10 @@ eo = IY = и́
 eo = IH = и
 eo = e = е
 eo = AH = е
-er = ɜː|AH = ер
+er = ER|AH = ер
 er = AA R|AA = ар
 ere = IY R|IA = ир
-eu|ew = juː = ью́
+eu|ew = Y UW = ью́
 eu|ew = ju = ью
 eu|ew = uː = у́
 ewe = ju|juAH = ью
