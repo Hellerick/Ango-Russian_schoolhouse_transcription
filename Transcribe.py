@@ -10,6 +10,7 @@ project_path = {
     'hellerick-C17A': r'/home/hellerick/PycharmProjects/Ango-Russian_schoolhouse_transcription'
 }[platform.node()]
 
+
 English_alphabet = 'abcdefghijklmnopqrstuvwxyzëéï'
 
 
@@ -26,6 +27,17 @@ def make_local_dictionary(file_path, word_list):
     user_dict_path = os.path.join(project_path, 'Dictionaries', 'User_dict.txt')
     US_dict_path = os.path.join(project_path, 'Dictionaries', 'cmudict.0.7a')
     UK_dict_path = os.path.join(project_path, 'Dictionaries', 'beep-1.0')
+
+    rules_path = os.path.join(project_path, 'Transcription_rules.txt')
+    with open(rules_path, mode='rt', encoding='utf8') as f:
+        rules =  f.read()
+        rules =  re.sub(r'  +', r' ', rules)
+        rules = re.sub(r'#.*?\n', r'\n', rules)
+        rules = rules.split('\n')
+        rules = [re.sub(r'(.*)#.*', r'\1', line) for line in rules]
+        rules = [line for line in rules if line != '']
+        rules = [re.split(r' ?= ?', line) for line in rules]
+    # for r in rules: print(r)
     pass
 
 
