@@ -47,9 +47,9 @@ ea = EY1  = ей
 ea = IY1 R|IA1 = иа
 ear = AH0 = ер
 ear = EH1 R = ер
-ear = IY1 R|IA = ир
+ear = IY1 R|IA1 = ир
 ee = IY1 = и́
-eer = IY1 R|IA = ир
+eer = IY1 R|IA1 = ир
 ei = IY1 = и́
 ei = IH1 = и
 ei = AY1 = ай
@@ -68,7 +68,7 @@ eu|ew = Y UW1 = ью́
 eu|ew = Y UH1 = ью
 eu|ew = UW1 = у́
 ewe = Y UW1 = ью
-ewer = Y UH R|Y UA = ьюр
+ewer = Y UH R|Y UA1 = ьюр
 ewer = OW1 R|OW1 AH0 = оуэ
 ey = IY1 = и́
 ey = IH1 = и

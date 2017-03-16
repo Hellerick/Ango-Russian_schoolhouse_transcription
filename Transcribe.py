@@ -31,21 +31,55 @@ def make_local_dictionary(file_path, word_list):
     rules_path = os.path.join(project_path, 'Transcription_rules.txt')
     with open(rules_path, mode='rt', encoding='utf8') as f:
         rules =  f.read()
-        rules =  re.sub(r'  +', r' ', rules)
-        rules = re.sub(r'#.*?\n', r'\n', rules)
-        rules = rules.split('\n')
-        rules = [re.sub(r'(.*)#.*', r'\1', line) for line in rules]
-        rules = [line for line in rules if line != '']
-        rules = [re.split(r' ?= ?', line) for line in rules]
-    # for r in rules: print(r)
-    pass
 
+    rules = re.sub(r'#.*?\n', r'\n', rules)
+    rules = rules.split('\n')
+    rules = [re.sub(r'(.*)#.*', r'\1', line) for line in rules]
+    rules = [line for line in rules if line != '']
+    rules = [re.split(r' ?= ?', line) for line in rules]
+    rules.sort(key = lambda x: len(x[0]), reverse=True)
+    # for r in rules: print(r)
+
+    with open(user_dict_path, mode='rt', encoding='utf8') as f:
+        user_dict =  f.read()
+    user_dict = re.sub(r'  +', r' ', user_dict)
+    user_dict = re.sub(r'#.*?\n', r'\n', user_dict)
+    user_dict = user_dict.split('\n')
+    user_dict = [re.sub(r'(.*)#.*', r'\1', line) for line in user_dict]
+    user_dict = [line for line in user_dict if line != '']
+    user_dict = [re.split(r' ?= ?', line) for line in user_dict]
+    user_dict = {line[0]:line[1] for line in user_dict}
+    # print(user_dict)
+
+    with open(US_dict_path, mode='rt', encoding='utf8') as f:
+        US_dict =  f.read()
+    US_dict = re.sub(r';.*?\n', r'\n', US_dict)
+    US_dict = re.sub(r'\(1\)', r'', US_dict)
+    US_dict = re.sub(r"'", r'’', US_dict)
+    US_dict = US_dict.split('\n')
+    # US_dict = [re.sub(r'(.*);.*', r'\1', line) for line in US_dict]
+    US_dict = [line for line in US_dict if line != '']
+    US_dict = [re.split(r'  ', line) for line in US_dict]
+    US_dict = {line[0].lower():line[1] for line in US_dict}
+    # print(US_dict)
+
+    with open(UK_dict_path, mode='rt', encoding='utf8') as f:
+        UK_dict =  f.read()
+    UK_dict = re.sub(r'#.*?\n', r'\n', UK_dict)
+    UK_dict = re.sub(r'\(1\)', r'', UK_dict)
+    UK_dict = re.sub(r"'", r'’', UK_dict)
+    UK_dict = UK_dict.split('\n')
+    # UK_dict = [re.sub(r'(.*)#.*', r'\1', line) for line in UK_dict]
+    UK_dict = [line for line in UK_dict if line != '']
+    UK_dict = [re.split(r'\s+', line) for line in UK_dict]
+    UK_dict = {line[0].lower():' '.join(line[1:]).upper() for line in UK_dict}
+    print(UK_dict)
 
 def convert_file(file_path):
     with open(file_path, mode='rt', encoding='utf8') as f:
         code = f.read()
     code = re.split('(<[^>]+>)', code)
-    print(code[:50])
+    # print(code[:50])
     word_list = list()
     for n, text in enumerate(code):
         if n%2 == 0:
@@ -59,7 +93,7 @@ def convert_file(file_path):
     for n, text in enumerate(code):
         if n%2 == 0:
             code[n] = convert_text(text)
-    print(code[:50])
+    # print(code[:50])
 
 
 def main():
