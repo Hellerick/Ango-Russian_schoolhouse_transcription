@@ -75,6 +75,23 @@ def make_local_dictionary(file_path, word_list):
     UK_dict = {line[0].lower():' '.join(line[1:]).upper() for line in UK_dict}
     print(UK_dict)
 
+    phonet_dict = dict()
+    for word in word_list:
+        if word in US_dict:
+            phonet_dict[word] = US_dict[word]
+        elif:
+            phonet_dict[word] = UK_dict[word]
+
+    local_dict = dict()
+    for word_list:
+        if word in user_dict:
+            local_dict[word] = user_dict[word]
+        elif word in US_dict:
+            local_dict[word] = get_from_dict[US_dict]
+        elif word in UK_dict:
+            local_dict[word] = get_from_dict[UK_dict]
+
+
 def convert_file(file_path):
     with open(file_path, mode='rt', encoding='utf8') as f:
         code = f.read()
