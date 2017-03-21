@@ -14,6 +14,31 @@ project_path = {
 English_alphabet = 'abcdefghijklmnopqrstuvwxyzëéï'
 
 
+def translit_cyr(word):
+    translit_pairs=[
+        ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ья'], ['ye', 'ье'],
+        ['yi', 'ьи'], ['yo', 'ьо'], ['yu', 'ью'], ['ch', 'ч'], ['sh', 'ш'],
+        ['th', 'т'], ['a', 'ф'], ['b', 'б'], ['c', 'к'], ['d', 'д'],
+        ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'и'],
+        ['j', 'дж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
+        ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
+        ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з']
+    ]
+    for pair in translit_pairs:
+        word = word.replace(*pair)
+    word = re.sub(r'(\A|[аеиоуяю])ь', r'\1', word)
+    word = re.sub(r'(\A|[аеиоуяю])е', r'\1э', word)
+    return word
+
+
+def try_lat_phonet_matching(prev_lat='',prev_cyr='', next_lat=lat, next_phonet=phonet, rules):
+
+
+
+def phonet_cyr(lat, phonet, rules):
+    cyr = try_lat_phonet_matching(prev_lat='',prev_cyr='', next_lat=lat, next_phonet=phonet, rules)
+    return cyr
+
 def convert_text(text):
     # make-wordlist
     # convert by user dictionary
@@ -79,17 +104,15 @@ def make_local_dictionary(file_path, word_list):
     for word in word_list:
         if word in US_dict:
             phonet_dict[word] = US_dict[word]
-        elif:
+        elif word in UK_dict:
             phonet_dict[word] = UK_dict[word]
 
-    local_dict = dict()
+    cyr_dict = dict()
     for word_list:
-        if word in user_dict:
-            local_dict[word] = user_dict[word]
-        elif word in US_dict:
-            local_dict[word] = get_from_dict[US_dict]
-        elif word in UK_dict:
-            local_dict[word] = get_from_dict[UK_dict]
+        if word in phonet_dict:
+            cyr_dict[word] = phonet_cyr(word, phonet_dict[word], rules)
+        else
+            cyr_dict[word] = translit_cyr(word)
 
 
 def convert_file(file_path):
