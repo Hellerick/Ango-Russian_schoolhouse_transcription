@@ -31,12 +31,13 @@ def translit_cyr(word):
     return word
 
 
-def try_lat_phonet_matching(prev_lat='',prev_cyr='', next_lat=lat, next_phonet=phonet, rules):
+def try_lat_phonet_matching(prev_lat, prev_cyr, next_lat, next_phonet, rules):
+    print(prev_lat, prev_cyr, next_lat, next_phonet)
+    pass
 
 
-
-def phonet_cyr(lat, phonet, rules):
-    cyr = try_lat_phonet_matching(prev_lat='',prev_cyr='', next_lat=lat, next_phonet=phonet, rules)
+def phonet_cyr(lat, phonet, rules=[]):
+    cyr = try_lat_phonet_matching(prev_lat='',prev_cyr='', next_lat=lat, next_phonet=phonet, rules=rules)
     return cyr
 
 def convert_text(text):
@@ -108,10 +109,10 @@ def make_local_dictionary(file_path, word_list):
             phonet_dict[word] = UK_dict[word]
 
     cyr_dict = dict()
-    for word_list:
+    for word in word_list:
         if word in phonet_dict:
             cyr_dict[word] = phonet_cyr(word, phonet_dict[word], rules)
-        else
+        else:
             cyr_dict[word] = translit_cyr(word)
 
 
