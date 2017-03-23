@@ -5,6 +5,7 @@ a = AH0 = а
 a = IH1 = и
 a = IY1 = и́
 a = AO1|AO0|AA1|AA0 = о
+ah = AA1 = аа
 ae|æ = IY1 = и́
 ae|æ = AE1 = а
 aer|ær = AA1 R = ар
@@ -114,10 +115,10 @@ j = JH = дж
 k = K = к
 kn = N = н
 l = L = л
-l = -   -
+l = - = -
 ll = L = л
 m = M = м
-m = -   м
+m = - = м
 mpb = M B = мб
 n = N|NG = н
 ng = NG = нг

@@ -31,14 +31,20 @@ def translit_cyr(word):
     return word
 
 
-def try_lat_phonet_matching(prev_lat, prev_cyr, next_lat, next_phonet, rules):
-    print(prev_lat, prev_cyr, next_lat, next_phonet)
-    pass
+def try_lat_phonet_matching(prev_cyr, next_lat, next_phonet, rules):
+    print(prev_cyr, next_lat, next_phonet)
+    if next_lat=='' and next_phonet==[]:
+        return prev_cyr
+    else:
+        for rule in rules:
+            if re.match(rule[0], next_lat) and re.fullmatch(rule[1], next_phonet[0]):
+                try_lat_phonet_matching(prev_cyr+rule[2], next_lat[re.match(rule[0], next_lat).span()[0]:], next_phonet[1:], rules)
 
 
 def phonet_cyr(lat, phonet, rules=[]):
-    cyr = try_lat_phonet_matching(prev_lat='',prev_cyr='', next_lat=lat, next_phonet=phonet, rules=rules)
+    cyr = try_lat_phonet_matching(prev_cyr='', next_lat=lat, next_phonet=phonet.split(), rules=rules)
     return cyr
+
 
 def convert_text(text):
     # make-wordlist
@@ -63,6 +69,10 @@ def make_local_dictionary(file_path, word_list):
     rules = [re.sub(r'(.*)#.*', r'\1', line) for line in rules]
     rules = [line for line in rules if line != '']
     rules = [re.split(r' ?= ?', line) for line in rules]
+    for r in rules:
+        if r[1] == '-': r[1] = ''
+    for r in rules:
+        if r[2] == '-': r[2] = ''
     rules.sort(key = lambda x: len(x[0]), reverse=True)
     # for r in rules: print(r)
 
