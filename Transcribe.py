@@ -32,17 +32,32 @@ def translit_cyr(word):
 
 
 def try_lat_phonet_matching(prev_cyr, next_lat, next_phonet, rules):
-    print(prev_cyr, next_lat, next_phonet)
+    print(f' - {prev_cyr}, {next_lat}, {repr(next_phonet)}')
     if next_lat=='' and next_phonet==[]:
+        print(f' : {prev_cyr}')
         return prev_cyr
     else:
         for rule in rules:
-            if re.match(rule[0], next_lat) and re.fullmatch(rule[1], next_phonet[0]):
-                try_lat_phonet_matching(prev_cyr+rule[2], next_lat[re.match(rule[0], next_lat).span()[0]:], next_phonet[1:], rules)
+            if re.match(rule[0], next_lat) and re.match(rule[1], ' '.join(next_phonet)):
+                # print('   rule:', rule)
+                if rule[1]=='':
+                    phonet_len = 0
+                else:
+                    phonet_len = len(re.match(rule[1], ' '.join(next_phonet)).group().split())
+                attempt = try_lat_phonet_matching(
+                    prev_cyr+rule[2],
+                    next_lat[re.match(rule[0], next_lat).span()[1]:],
+                    next_phonet[phonet_len:],
+                    rules
+                )
+                if attempt: return attempt
 
 
 def phonet_cyr(lat, phonet, rules=[]):
+    print(f'{lat} [{phonet}]')
     cyr = try_lat_phonet_matching(prev_cyr='', next_lat=lat, next_phonet=phonet.split(), rules=rules)
+    if cyr == None:
+        raise Exception('Not matched!')
     return cyr
 
 
@@ -74,6 +89,7 @@ def make_local_dictionary(file_path, word_list):
     for r in rules:
         if r[2] == '-': r[2] = ''
     rules.sort(key = lambda x: len(x[0]), reverse=True)
+    rules.sort(key = lambda x: x[1]=='')
     # for r in rules: print(r)
 
     with open(user_dict_path, mode='rt', encoding='utf8') as f:
@@ -120,7 +136,9 @@ def make_local_dictionary(file_path, word_list):
 
     cyr_dict = dict()
     for word in word_list:
-        if word in phonet_dict:
+        if word in user_dict:
+            cyr_dict[word] = user_dict[word]
+        elif word in phonet_dict:
             cyr_dict[word] = phonet_cyr(word, phonet_dict[word], rules)
         else:
             cyr_dict[word] = translit_cyr(word)

@@ -1,2 +1,16 @@
 # Мой словарик
-russia = раша
+ah = а
+am = эм
+are = ар
+asked = эскт
+actual = экчуал
+actually = экчуалли
+anxious = энкшес
+b = б
+choir = кўэйр
+cia = сиэ
+ciao = чао
+cnn = снн
+cnn’s = снн’с
+d = д
+dearie = дири
