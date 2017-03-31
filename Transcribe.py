@@ -32,9 +32,10 @@ def translit_cyr(word):
 
 
 def try_lat_phonet_matching(prev_cyr, next_lat, next_phonet, rules):
-    print(f' - {prev_cyr}, {next_lat}, {repr(next_phonet)}')
+    global watch
+    watch += f'\n - {prev_cyr}, {next_lat}, {repr(next_phonet)}'
     if next_lat=='' and next_phonet==[]:
-        print(f' : {prev_cyr}')
+        # print(f' : {prev_cyr}')
         return prev_cyr
     else:
         for rule in rules:
@@ -54,9 +55,11 @@ def try_lat_phonet_matching(prev_cyr, next_lat, next_phonet, rules):
 
 
 def phonet_cyr(lat, phonet, rules=[]):
-    print(f'{lat} [{phonet}]')
+    global watch
+    watch = f'{lat} [{phonet}]'
     cyr = try_lat_phonet_matching(prev_cyr='', next_lat=lat, next_phonet=phonet.split(), rules=rules)
     if cyr == None:
+        print(watch)
         raise Exception('Not matched!')
     return cyr
 
@@ -106,7 +109,7 @@ def make_local_dictionary(file_path, word_list):
     with open(US_dict_path, mode='rt', encoding='utf8') as f:
         US_dict =  f.read()
     US_dict = re.sub(r';.*?\n', r'\n', US_dict)
-    US_dict = re.sub(r'\(1\)', r'', US_dict)
+    # US_dict = re.sub(r'\(1\)', r'', US_dict)
     US_dict = re.sub(r"'", r'’', US_dict)
     US_dict = US_dict.split('\n')
     # US_dict = [re.sub(r'(.*);.*', r'\1', line) for line in US_dict]
@@ -125,7 +128,7 @@ def make_local_dictionary(file_path, word_list):
     UK_dict = [line for line in UK_dict if line != '']
     UK_dict = [re.split(r'\s+', line) for line in UK_dict]
     UK_dict = {line[0].lower():' '.join(line[1:]).upper() for line in UK_dict}
-    print(UK_dict)
+    # print(UK_dict)
 
     phonet_dict = dict()
     for word in word_list:

@@ -1,6 +1,6 @@
-a = EY1|EY = ей
+a = EY1|EY2|EY = ей
 a = AE1|AE = э
-a = AE0|AO|AA|AX = а
+a = AE0|AO|AA|AX|IH = а
 a = AH0 = а
 a = IH0 = и
 a = IY1 = и́
@@ -12,21 +12,24 @@ aer|ær = AA1 R = ар
 ai|ay = EY1|EY2|EY = ей
 ai|ay = IH0|IY0 = и
 ai|ay = IY1 = и́
-ai|ay = AY1 = ай
+ai|ay = AY1|AY2 = ай
 ai = AH0 = е
 ai = - = е
-air|aire|ayr = EH1 R = ер
+air|aire|ayr = EH1 R|EA R = ер
 #al/C = AA1 = о́
 #al/C = AA1 L = о́л
 #al/C = AEl = ал
 al = AO1 L = о́л
-al = L = ал
-alb = AO0 L B = о́лб
-ar|are = AA1 R|AE1 R|ER0 = ар
+al = L|AX L|AH0 L = ал
+alb = AO0 L B = олб
+ao = AO1 = ао
+ar|are = AA1 R|AE1 R|ER0|R|EH0 R = ар
 ar|are|aer = EH1 R|EH2 R|EA R = ер
+ary = ER0 R IY0 = ари
 au|aw = AA1 = о
-au|aw = AW1|AO2|AH1 = о́
-awr = ER0 = ер
+au|aw = AO1|AO2|AH1 = о́
+au|aw = AW1|AW = ау
+aur|awr = ER0 = ер
 b = B = б
 bb = B = бб
 b = - = -
@@ -42,6 +45,8 @@ ch = CH = ч
 ch = JH = дж
 ch = K = к
 ch = SH = ш
+chew = CH UW1 = чью́
+cie = CH AH0 = че
 ck = K = к
 ct = T = кт
 cts = K S = ктс
@@ -50,20 +55,24 @@ d = - = -
 dal = D L = дал
 dar = D R = др
 du = D UW2|D UW1 = дью́
+du = JH UW0 = джу
+d = JH = дж
 d = T = т
-e = IY1|IY2 = и́
+e = IY1|IY2|IY = и́
 e = EH1|AH0|IH0|EH2|AX|EH|IH|IY0 = е
 e = IH1 = и
-e = EY1|EY2 = ей
+e = EY1|EY2|EY = ей
+e = EY0 = е
 e = - = -
 ea = IY1|IY = и́
 ea = IH1 = и
-ea = EH1|EH2 = е
+ea = EH1|EH = е
 ea = EY1 = ей
 ea = IY1 R|IA1|IY AX = иа
 ear = AH0 = ер
 ear = EH1 R = ер
-ear = IY1 R|IA1 = ир
+ear = IY1 R|IA = ир
+ear = ER1 = ёр
 eau = Y UW1 = ью́
 ee = IY1|IY = и́
 eer = IY1 R|IA = ир
@@ -75,17 +84,18 @@ ei = IY1 IH0 = и́и
 eigh = AY1 = ай
 eigh = EY1 = ей
 eir = IY1 R|IA = ир
+el = AX L = ел
 eo = IY1 = и́
 eo = IH1 = и
 eo = EH1 = е
 eo = AH0 = е
-er = ER0|AH0 = ер
+er = ER0|AH0|AX = ер
+er = ER0 R = ер
 er = AA1 R|AA1 = ар
-er = ER1|ER2 = ёр
+er = ER1|ER2|ER = ёр
 ere = IY1 R|IA1 = ир
 eu|ew = Y UW1 = ью́
 eu|ew = Y UH1 = ью
-eu|ew = UW1 = у́
 ewe = Y UW1 = ью
 ewer = Y UH R|Y UA1 = ьюр
 ewer = OW1 R|OW1 AH0 = оуэ
@@ -95,16 +105,19 @@ ey = EY1 = ей
 f = F = ф
 f = V = в
 ff = F = фф
+fort = F T = форт
 g = G = г
 g = JH = дж
 g = ZH = ж
 gn = N = н
+gno = N Y AA0 = ньё
 gg = G = гг
 gg = JH = дж
 gg = ZH = ж
 gh = F = ф
 gh = G HH = гх
 gh = - = -
+gm = M = м
 h = HH = х
 h = - = -
 i = - = -
@@ -112,79 +125,102 @@ i = AY1|AY = ай
 i = IH1|IH2|IH|AH0|IY0|IY = и
 i = IY1 = и́
 ia = AY1 AH0|AY1 AE0 = айа
-ia = AY1 AH0|AY1 AE0 = иа
+ia = IA = иа
 ia = AY1 = ай
-ia = Y AH0 = ье
+ia = Y AH0 = ья
 iar = AY1 ER|AY1 AH0 = айар
+iar = Y ER0 = иар
 ie = AY1 AH0 = айе
 ie = IH1 = и
 ie = IY1 = и́
 ier = AY1 ER|AY1 AH0 = = айер
 ier = IY1 R|IA = ир
+ier = IA R = иер
+ieu = UW0 = ью
+iew = Y UW2 = ью́
 igh = AY1 = ай
 igh = IH1 G HH = игх
+ing = IH0 N = инг
 io = AH0|IH0 = е
 io = - = е
 io = AY1 AH0 = айо
 io = Y AH0|IA = ио
-ior = Y ER0 = иор
+ior = Y ER0|IY0 ER0 = иор
 ir = ER = ёр
-ir = ɪAH = ир
-ire = aɪAH = айр
+ir = IA = ир
+ir = AY1 ER0 = айр
+ir = AY1 ER0 R = айр
 ire = IY1 R|IA1 = ир
 irr = IH1 R = ирр
+iu = IA = иу
 j = JH = дж
+ju = JH UW0 = джу
 k = K = к
 kn = N = н
 l = L = л
 l = - = -
-l = AH0 L = л
+l = AH0 L|AX L = л
+leu|lew = L UW1 = лью́
+leu|lew = L UW0 = лью
 ll = L = лл
 lu = L UW2|L UW1 = лью́
+lu = L UW0 = лью
 m = M = м
 m = - = м
+mm = M = мм
 mn = M = м
 mpb = M B = мб
 n = N|NG|AH0 N = н
+neu|new = N UW1 = нью́
+neu|new = N UW0 = нью
 ng = NG = нг
+ngth = NG K TH = нгт̈
+nm = M = нм
 nn = N = нн
 nu = N UW2|N UW1 = нью́
 o = OW1|OW2|OW = оу
-o = AH0|AA1|AA2|AA0|OW0|AX|OH = о
-o = AO1|AO2 = о́
+o = AH0|AA1|AA2|AA0|OW0|AX|OH|IH0 = о
+o = AO1|AO2|AO0 = о́
 o = AH1|AH = а
-o = UW1 = у́
-oa = OW1 = оу
+o = UW1|UW = у́
+o = UH = у
+o = IH = и
+oa = OW1|OW = оу
 oa = AO1|AO2 = о́
 oar = AO1 R|AH0 R = ор
 oe|œ = IY1 = и́
 oi|oy = OY = ой
 oid = OY D = оид
-oo = UH1|UH2 = у
+oo = UH1|UH2|UH = у
 oo = UW1|UW = у́
 oo = AH = а
 oo = W AA1|W AA2 = оо
 oor|oore = AO1 R|AO = ор
 oor|oore = UW1 R|UA = ур
-one = W AH0 N|W AH2 N = ўан
+on = N = он
+one = W AH0 N|W AH2 N|W AH1 N = ўан
 or = AO1 R|AO2 R|ER0|AH0|AO0 R|AO = ор
+or = ER0 R = ор
 or = ER = ёр
 or = AHː = эр
+or = R = ор
 ore = AO1 R|AO1 = ор
 ou = AH1 = а
 ou = OW1 = оу
 ou = AW1|AW = ау
-ou = UH1|UH2 = у
+ou = UH1|UH2|UH = у
 ou = UW1|UW = у́
 ou = AH0 = е
-ough = au = ау
+ough = AW1 = ау
 ough = AH1 F = аф
 ough = AO1 HH = ох
 our = AO1 ER0|ER0|AH0 = ор
 our = AW1 ER0|AW1 AH0 R| = аур
 our = ER1 = ер
+our = UA R = ур
+ous = IH0 S = ес
 ow = OW1 = оу
-ow = AW1|AW2 = ау
+ow = AW1|AW2|AW = ау
 ow = AO1 = о́
 ower = AW1 ER0 = ауэр
 ower = OW1 ER0 = оуэр
@@ -197,6 +233,7 @@ ph = P HH = пх
 q = K = к
 qu = K = к
 qu = K W = кў
+qua = K W OH = кўо
 r = R = р
 r = ER0 = р
 r = - = р
@@ -207,57 +244,75 @@ s = Z = з
 s = SH = ш
 s = ZH = ж
 s = - = -
+sew = S UW1 = сью́
 sh = SH = ш
 sh = S HH = сх
-sm = Z AH0 M = зм
+sm = Z AH0 M|Z AX M = зм
 ss = S = с
 ss = Z = з
+ssu = SH UW0 = шью
+su|sui = S UW2 = сью́
+su = S UW0 = сью
 t = T = т
 t = SH = ш
 t = CH = ч
+t = ZH = ж
 t = - = -
 tch = CH = тч
 teur = CH ER2 = чёр
+tew = T UW1 = тью́
 th = T = т
 th = TH = т̈
 th = DH = д̈
 th = T HH = тх
 ts = T S = тс
+tt = T = тт
 tu = T UW2|T UW1 = тью́
 tu = T UW0 = тью
 tu = CH UW0 = чу
 tz = T S = ц
 u = Y UW1|Y UW2|Y UW = ью́
 u = Y UW0|Y AH0|Y UH = ью
-u = UH1|UH2 = у
+u = Y AH0 W = ью
+u = UH1|UH2|UH = у
 u = UW1 = у́
 u = AH1|AH2|AH = а
-u = AH0|AX = у
+u = AH0|AX|IH0 = у
 u = W = ў
 u = - = -
 u = IH1 = и
 u = EH1 = е
+ua = AH0 W AH0|UW2 AH0 = уа
+ua = Y AH0 = ьюа
 ue = EH1 = е
 ue = - = -
 ui = IH1 = и
 ur = ER1|AH0|ER = ёр
 ur = Y ER0 = ьюр
 v = V = в
+vor = V R = вор
 w|wh = W = ў
 w = V = в
 w = - = -
+wa = W OH = ўо
 wh = HH W = ў
+what = W AH1 T|W AH2 T = ўот
 wor = W ER1 = ўӭр
 x = K S = кс
 x = G Z = гз
 x = Z = з
-y = IH1|IY0|IY|IH0|IH = и
-y = AY1|AY2 = ай
+xc = K S = кс
+y = IH1|IY0|IY|IH0|IH|AH0 = и
+y = AY1|AY2|AY0|AY = ай
 y = Y = й
 yr = ER1 = ёр
 yr = ER0 = ер
 z = Z = з
-zz = Z = зз
 z = T S = ц
 z = S|TH = с
+zz = Z = зз
+zz = T S = цц
 ’ = - = ’
+’d = AH0 D|IH0 D = ’д
+’s = IH Z = ’з
+’v = AH0 V = ’в
