@@ -1,6 +1,7 @@
 import os
 import platform
 import re
+import pickle
 
 # rules:
 # https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F
@@ -17,9 +18,9 @@ English_alphabet = 'abcdefghijklmnopqrstuvwxyzëéï'
 def translit_cyr(word):
     translit_pairs=[
         ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ья'], ['ye', 'ье'],
-        ['yi', 'ьи'], ['yo', 'ьо'], ['yu', 'ью'], ['ch', 'ч'], ['sh', 'ш'],
-        ['th', 'т'], ['a', 'ф'], ['b', 'б'], ['c', 'к'], ['d', 'д'],
-        ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'и'],
+        ['yi', 'ьи'], ['yo', 'ьо'], ['yu', 'ью'], ['ch', 'ч'], 
+        ['sh', 'ш'], ['th', 'т'], ['a', 'а'], ['b', 'б'], ['c', 'к'],
+        ['d', 'д'], ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'и'],
         ['j', 'дж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
         ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
         ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з']
@@ -64,12 +65,81 @@ def phonet_cyr(lat, phonet, rules=[]):
     return cyr
 
 
-def convert_text(text):
-    # make-wordlist
-    # convert by user dictionary
-    # make dictionary based on US, then on UK dictionary; convert
-    # try convert by word-breaking
-    pass
+def convert_word(word, cyr_dict):
+    if word == '':
+        return word
+    if word[0].isupper():
+        if len(word)<2 or word[1].islower():
+            case = 'title'
+        else:
+            case = 'allcaps'
+    else:
+        case = 'lower'
+    word = cyr_dict[word.lower()]
+    if case == 'title':
+        word = word[0].upper() + word[1:]
+    elif case == 'allcaps':
+        word = word.upper()
+    return word
+
+
+def convert_text(text, cyr_dict):
+    text = re.sub(r'(['+English_alphabet+r']\s)I', r'\1i', text)
+    text = re.split('(['+English_alphabet+English_alphabet.upper()+'’]*['+English_alphabet+English_alphabet.upper()+'])', text)
+    #print(f'Text <{text}>')
+    for n, word in enumerate(text):
+        if n%2 == 1:
+            text[n] = convert_word(word, cyr_dict)
+    return ''.join(text)
+
+
+def try_breaking(word, cyr_dict):
+    boundary = sorted(list(range(1, len(word))), key = lambda x: abs(x - len(word)/2))
+    for b in boundary:
+        if word[:b] in cyr_dict and word[b:] in cyr_dict:
+            print(f'Word broken: {word[:b]} + {word[b:]}')
+            return cyr_dict[word[:b]]+cyr_dict[word[b:]]
+
+
+def postprocess(cyr_dict, user_dict, full_normalization = False):
+    lat_words = cyr_dict.keys()
+    cyr_words = '\n'.join(cyr_dict.values())
+    rules = [
+        [r'(\b|-|а|е|о|у|ў|ю|́)е', r'\1э̀'],
+        [r'(\b|-|а|е|о|у|ў|ю|́)ё', r'\1ӭ'],
+        [r'ьйа','ья'],
+        [r'ьйу', 'ью'],
+        [r'\bьйе', 'йе'],
+        [r'ьйе', 'ье'],
+        [r'(\b|а|е|и|о|у|ю|́)ь', r'\1'],
+        ['э̀й', 'эй'],
+        [r'([бгдзлмнпрстф])\1([бдзклмнпртсф])', r'\1\2'],
+        [r'([гзлрстф])\1\b', r'\1'],
+    ]
+    if full_normalization:
+        rules = rules + [
+            ['ўу', 'ву'],
+            ['ў', 'у'],
+            ['(т̈|д̈|ҙ|ҫ)', 'т'],
+            ['[̈́̀]', ''],
+        ]
+    for rule in rules:
+        cyr_words = re.sub(rule[0], rule[1], cyr_words)
+    cyr_dict = dict(zip(lat_words, cyr_words.split('\n')))
+    for word in user_dict:
+        cyr_dict[word] = user_dict[word]
+    return cyr_dict
+
+
+def dialog_mode(cyr_dict):
+    while True:
+        u = input()
+        try:
+            print(cyr_dict[u.lower()])
+        except KeyError:
+            pass
+        if u == '':
+            return None
 
 
 def make_local_dictionary(file_path, word_list):
@@ -77,6 +147,11 @@ def make_local_dictionary(file_path, word_list):
     user_dict_path = os.path.join(project_path, 'Dictionaries', 'User_dict.txt')
     US_dict_path = os.path.join(project_path, 'Dictionaries', 'cmudict.0.7a')
     UK_dict_path = os.path.join(project_path, 'Dictionaries', 'beep-1.0')
+    local_dict_path = os.path.join(project_path, 'Dictionaries', 'Local_dict.txt')
+    local_dict_pickle_path = os.path.join(project_path, 'Dictionaries', 'Local_dict.pickle')
+
+    if os.path.exists(local_dict_pickle_path):
+        return pickle.load(open(local_dict_pickle_path, mode='rb'))
 
     rules_path = os.path.join(project_path, 'Transcription_rules.txt')
     with open(rules_path, mode='rt', encoding='utf8') as f:
@@ -91,6 +166,7 @@ def make_local_dictionary(file_path, word_list):
         if r[1] == '-': r[1] = ''
     for r in rules:
         if r[2] == '-': r[2] = ''
+    rules.sort(key = lambda x: len(x[1]), reverse=True)
     rules.sort(key = lambda x: len(x[0]), reverse=True)
     rules.sort(key = lambda x: x[1]=='')
     # for r in rules: print(r)
@@ -137,14 +213,28 @@ def make_local_dictionary(file_path, word_list):
         elif word in UK_dict:
             phonet_dict[word] = UK_dict[word]
 
-    cyr_dict = dict()
+    cyr_dict = {word:user_dict[word] for word in user_dict}
     for word in word_list:
-        if word in user_dict:
-            cyr_dict[word] = user_dict[word]
-        elif word in phonet_dict:
+        if not word in user_dict and word in phonet_dict:
             cyr_dict[word] = phonet_cyr(word, phonet_dict[word], rules)
-        else:
-            cyr_dict[word] = translit_cyr(word)
+    for word in word_list:
+        if not word in cyr_dict:
+            attempt = try_breaking(word, cyr_dict)
+            if attempt:
+                cyr_dict[word] = attempt
+            else:
+                print('Not found:', word)
+                cyr_dict[word] = translit_cyr(word)
+    cyr_dict = postprocess(cyr_dict, user_dict, full_normalization=False)
+
+    cyr_list = sorted([word+' = '+cyr_dict[word] for word in cyr_dict])
+    cyr_list = '\n'.join(cyr_list)
+    with open(local_dict_path, mode='wt', encoding='utf8') as f:
+        f.write(cyr_list)
+
+    pickle.dump(cyr_dict, open(local_dict_pickle_path, mode='wb'))
+
+    return cyr_dict
 
 
 def convert_file(file_path):
@@ -161,11 +251,14 @@ def convert_file(file_path):
     word_list_path = re.sub(r'\.[a-z]+\Z', '.WordList.txt', file_path)
     with open(word_list_path, 'wt', encoding='utf8') as word_list_file:
         word_list_file.write('\n'.join(word_list))
-    make_local_dictionary(file_path, word_list)
+    cyr_dict = make_local_dictionary(file_path, word_list)
     for n, text in enumerate(code):
         if n%2 == 0:
-            code[n] = convert_text(text)
-    # print(code[:50])
+            code[n] = convert_text(text, cyr_dict)
+    code = ''.join(code)
+    output_path = re.sub(r'(.*)\.([a-zA-Z0-9]+)', r'\1.Cyr.\2', file_path)
+    with open(output_path, mode='wt', encoding='utf8') as f:
+        f.write(code)
 
 
 def main():

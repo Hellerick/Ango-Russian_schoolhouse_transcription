@@ -9,23 +9,29 @@ a = EH1|EH2 = е
 ae|æ = IY1|IY = и́
 ae|æ = AE1 = а
 aer|ær = AA1 R = ар
+aer = EH1 R|EH2 R|EA R = ейр
 ai|ay = EY1|EY2|EY = ей
 ai|ay = IH0|IY0 = и
 ai|ay = IY1 = и́
 ai|ay = AY1|AY2 = ай
 ai = AH0 = е
 ai = - = е
-air|aire|ayr = EH1 R|EA R = ер
+air|aire|ayr = EH1 R|EA R = ейр
 #al/C = AA1 = о́
 #al/C = AA1 L = о́л
 #al/C = AEl = ал
 al = AO1 L = о́л
 al = L|AX L|AH0 L = ал
 alb = AO0 L B = олб
+alk = AO2 K|AO1 K = о́к
+all = AH0 L = алл
+all = AO1 L|AO2 L = олл
+allu = AH0 L UW2|AH0 L UW1 = аллю́
+alm = AA1 M = алм
 ao = AO1 = ао
 ar|are = AA1 R|AE1 R|ER0|R|EH0 R = ар
-ar|are|aer = EH1 R|EH2 R|EA R = ер
-ary = ER0 R IY0 = ари
+ar|are = EH1 R|EH2 R|EA R = ейр
+ari|ary = ER0 R IY0|EH2 R IY0 = ари
 au|aw = AA1 = о
 au|aw = AO1|AO2|AH1 = о́
 au|aw = AW1|AW = ау
@@ -64,18 +70,21 @@ e = IH1 = и
 e = EY1|EY2|EY = ей
 e = EY0 = е
 e = - = -
+e\b = EY2 = е
 ea = IY1|IY = и́
 ea = IH1 = и
 ea = EH1|EH = е
 ea = EY1 = ей
 ea = IY1 R|IA1|IY AX = иа
+ea = IY0 EY1 = иэй
+ean = IY1 AH0 N = иан
 ear = AH0 = ер
 ear = EH1 R = ер
 ear = IY1 R|IA = ир
 ear = ER1 = ёр
 eau = Y UW1 = ью́
-ee = IY1|IY = и́
-eer = IY1 R|IA = ир
+ee = IY1|IY|IH1 = и́
+eer = IY1 R|IH1 R|IA = ир
 ei = IY1 = и́
 ei = IH1 = и
 ei = AY1 = ай
@@ -106,6 +115,7 @@ f = F = ф
 f = V = в
 ff = F = фф
 fort = F T = форт
+ful = F AH0 L = фул
 g = G = г
 g = JH = дж
 g = ZH = ж
@@ -133,9 +143,11 @@ iar = Y ER0 = иар
 ie = AY1 AH0 = айе
 ie = IH1 = и
 ie = IY1 = и́
+ie = IY0 AH0 = ие
+ie = AH0 = ее
 ier = AY1 ER|AY1 AH0 = = айер
 ier = IY1 R|IA = ир
-ier = IA R = иер
+ier = IY0 ER0|IA R = иер
 ieu = UW0 = ью
 iew = Y UW2 = ью́
 igh = AY1 = ай
@@ -146,13 +158,14 @@ io = - = е
 io = AY1 AH0 = айо
 io = Y AH0|IA = ио
 ior = Y ER0|IY0 ER0 = иор
+iou = IY0 AH0 = иэ
 ir = ER = ёр
 ir = IA = ир
 ir = AY1 ER0 = айр
 ir = AY1 ER0 R = айр
 ire = IY1 R|IA1 = ир
 irr = IH1 R = ирр
-iu = IA = иу
+iu = IY0 AH0|IA = иу
 j = JH = дж
 ju = JH UW0 = джу
 k = K = к
@@ -163,8 +176,11 @@ l = AH0 L|AX L = л
 leu|lew = L UW1 = лью́
 leu|lew = L UW0 = лью
 ll = L = лл
-lu = L UW2|L UW1 = лью́
-lu = L UW0 = лью
+lly = L IY0 = лли
+lu = L UW2|L UW1 = лю́
+lu = L UW0 = лю
+llu = L UW2|L UW1 = ллю́
+llu = L UW0 = ллю
 m = M = м
 m = - = м
 mm = M = мм
@@ -185,6 +201,7 @@ o = AH1|AH = а
 o = UW1|UW = у́
 o = UH = у
 o = IH = и
+o\b = OW2 = о
 oa = OW1|OW = оу
 oa = AO1|AO2 = о́
 oar = AO1 R|AH0 R = ор
@@ -195,7 +212,7 @@ oo = UH1|UH2|UH = у
 oo = UW1|UW = у́
 oo = AH = а
 oo = W AA1|W AA2 = оо
-oor|oore = AO1 R|AO = ор
+oor|oore = AO1 R|AO2 R|AO = ор
 oor|oore = UW1 R|UA = ур
 on = N = он
 one = W AH0 N|W AH2 N|W AH1 N = ўан
@@ -218,7 +235,7 @@ our = AO1 ER0|ER0|AH0 = ор
 our = AW1 ER0|AW1 AH0 R| = аур
 our = ER1 = ер
 our = UA R = ур
-ous = IH0 S = ес
+ous = AH0 S|IH0 S = ос
 ow = OW1 = оу
 ow = AW1|AW2|AW = ау
 ow = AO1 = о́
@@ -237,8 +254,8 @@ qua = K W OH = кўо
 r = R = р
 r = ER0 = р
 r = - = р
-reu|rew|ru = R UW2|R UW1|R UW = тью́
-ru = R UW0 = рью
+reu|rew|ru = R UW2|R UW1|R UW = ру́
+ru = R UW0 = ру
 s = S = с
 s = Z = з
 s = SH = ш
@@ -248,11 +265,13 @@ sew = S UW1 = сью́
 sh = SH = ш
 sh = S HH = сх
 sm = Z AH0 M|Z AX M = зм
-ss = S = с
+ss = S = сс
 ss = Z = з
+ss = SH = ш
 ssu = SH UW0 = шью
-su|sui = S UW2 = сью́
+su|sui = S UW1|S UW2 = сью́
 su = S UW0 = сью
+super = S UW1 P ER0|S UW2 P ER0|S UW0 P ER0 = су́пер
 t = T = т
 t = SH = ш
 t = CH = ч
@@ -261,15 +280,14 @@ t = - = -
 tch = CH = тч
 teur = CH ER2 = чёр
 tew = T UW1 = тью́
-th = T = т
-th = TH = т̈
-th = DH = д̈
+th = TH = ҫ
+th = DH = ҙ
 th = T HH = тх
 ts = T S = тс
 tt = T = тт
 tu = T UW2|T UW1 = тью́
 tu = T UW0 = тью
-tu = CH UW0 = чу
+tu = CH UW0|CH AH0 = чу
 tz = T S = ц
 u = Y UW1|Y UW2|Y UW = ью́
 u = Y UW0|Y AH0|Y UH = ью
@@ -287,14 +305,17 @@ ua = Y AH0 = ьюа
 ue = EH1 = е
 ue = - = -
 ui = IH1 = и
-ur = ER1|AH0|ER = ёр
+ur = ER1|AH0 = ёр
+ur = ER = ёр
+ur = ER0 = ур
 ur = Y ER0 = ьюр
 v = V = в
 vor = V R = вор
-w|wh = W = ў
+wh = W = ў
+w = W = ў
 w = V = в
 w = - = -
-wa = W OH = ўо
+wa = W OH|W AA1|W AO1 = ўо
 wh = HH W = ў
 what = W AH1 T|W AH2 T = ўот
 wor = W ER1 = ўӭр
@@ -304,9 +325,9 @@ x = Z = з
 xc = K S = кс
 y = IH1|IY0|IY|IH0|IH|AH0 = и
 y = AY1|AY2|AY0|AY = ай
-y = Y = й
+y = Y = ьй
 yr = ER1 = ёр
-yr = ER0 = ер
+yr = ER0 = ир
 z = Z = з
 z = T S = ц
 z = S|TH = с
@@ -314,5 +335,6 @@ zz = Z = зз
 zz = T S = цц
 ’ = - = ’
 ’d = AH0 D|IH0 D = ’д
-’s = IH Z = ’з
+’s = IH Z = ’с
+’s = Z = ’с
 ’v = AH0 V = ’в
