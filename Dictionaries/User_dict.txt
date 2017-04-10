@@ -142,6 +142,7 @@ telekinetic = телекайнетик
 their = ҙейр
 they’re = ҙей’р
 thirty = ҫёрти
+to = ту
 together = тугеҙер
 trubs = трабз
 tutankhamen = тутанкамен
