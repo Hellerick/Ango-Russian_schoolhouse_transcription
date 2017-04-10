@@ -69,7 +69,7 @@ def convert_word(word, cyr_dict):
     if word == '':
         return word
     if word[0].isupper():
-        if len(word)<2 or word[1].islower():
+        if len(word)<2 or word[1].islower() or word[1] in ['’']:
             case = 'title'
         else:
             case = 'allcaps'
@@ -84,7 +84,9 @@ def convert_word(word, cyr_dict):
 
 
 def convert_text(text, cyr_dict):
-    text = re.sub(r'(['+English_alphabet+r']\s)I', r'\1i', text)
+    text = re.sub(r'(['+English_alphabet+r',]\s)I', r'\1i', text)
+    text = re.sub(r'\{[^}]+\}\{=([^}]+)\}', r'\1', text)
+
     text = re.split('(['+English_alphabet+English_alphabet.upper()+'’]*['+English_alphabet+English_alphabet.upper()+'])', text)
     #print(f'Text <{text}>')
     for n, word in enumerate(text):
@@ -114,11 +116,12 @@ def postprocess(cyr_dict, user_dict, full_normalization = False):
         [r'(\b|а|е|и|о|у|ю|́)ь', r'\1'],
         ['э̀й', 'эй'],
         [r'([бгдзлмнпрстф])\1([бдзклмнпртсф])', r'\1\2'],
-        [r'([гзлрстф])\1\b', r'\1'],
+        [r'([гзклмрстф])\1(\b|ь)', r'\1\2'],
+        [r'ўу', 'в̆у'],
     ]
     if full_normalization:
         rules = rules + [
-            ['ўу', 'ву'],
+            ['̆в', 'в'],
             ['ў', 'у'],
             ['(т̈|д̈|ҙ|ҫ)', 'т'],
             ['[̈́̀]', ''],
