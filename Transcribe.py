@@ -12,18 +12,23 @@ project_path = {
 }[platform.node()]
 
 
-English_alphabet = 'abcdefghijklmnopqrstuvwxyzëéï'
+English_alphabet = 'abcdefghijklmnopqrstuvwxyzáâéëíïú'
+
+hyphenate = True
 
 
 def translit_cyr(word):
     translit_pairs=[
         ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ья'], ['ye', 'ье'],
         ['yi', 'ьи'], ['yo', 'ьо'], ['yu', 'ью'], ['ch', 'ч'], 
-        ['sh', 'ш'], ['th', 'т'], ['a', 'а'], ['b', 'б'], ['c', 'к'],
+        ['sh', 'ш'], ['th', 'т'],
+        ['yá', 'ья́'],
+        ['a', 'а'], ['b', 'б'], ['c', 'к'],
         ['d', 'д'], ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'и'],
         ['j', 'дж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
         ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
-        ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з']
+        ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з'],
+        ['á', 'а́']
     ]
     for pair in translit_pairs:
         word = word.replace(*pair)
@@ -62,6 +67,7 @@ def phonet_cyr(lat, phonet, rules=[]):
     if cyr == None:
         print(watch)
         raise Exception('Not matched!')
+    # print('phonet_cyr', cyr)
     return cyr
 
 
@@ -80,14 +86,13 @@ def convert_word(word, cyr_dict):
         word = word[0].upper() + word[1:]
     elif case == 'allcaps':
         word = word.upper()
+    # print('convert_word', word)
     return word
 
 
 def convert_text(text, cyr_dict):
-    text = re.sub(r'(['+English_alphabet+r',]\s)I', r'\1i', text)
-    text = re.sub(r'\{[^}]+\}\{=([^}]+)\}', r'\1', text)
-
-    text = re.split('(['+English_alphabet+English_alphabet.upper()+'’]*['+English_alphabet+English_alphabet.upper()+'])', text)
+    text = re.sub(r'(['+English_alphabet+r',]\s)I\b', r'\1i', text)
+    text = re.split('(['+English_alphabet+English_alphabet.upper()+'’]*['+English_alphabet+English_alphabet.upper()+'][0-9]?)', text)
     #print(f'Text <{text}>')
     for n, word in enumerate(text):
         if n%2 == 1:
@@ -95,17 +100,18 @@ def convert_text(text, cyr_dict):
     return ''.join(text)
 
 
-def try_breaking(word, cyr_dict):
+def try_breaking(word, cyr_dict, phonet_dict, rules):
     boundary = sorted(list(range(1, len(word))), key = lambda x: abs(x - len(word)/2))
     for b in boundary:
-        if word[:b] in cyr_dict and word[b:] in cyr_dict:
+        if (word[:b] in cyr_dict or word[:b] in phonet_dict) and (word[b:] in cyr_dict or word[b:] in phonet_dict):
             print(f'Word broken: {word[:b]} + {word[b:]}')
-            return cyr_dict[word[:b]]+cyr_dict[word[b:]]
+            returned = [cyr_dict[w] if w in cyr_dict else phonet_cyr(w, phonet_dict[w], rules) for w in [word[:b], word[b:]]]
+            return '¬'.join(returned)
 
 
 def postprocess(cyr_dict, user_dict, full_normalization = False):
     lat_words = cyr_dict.keys()
-    cyr_words = '\n'.join(cyr_dict.values())
+    cyr_words = '\n'.join(cyr_dict.values()) # т̈
     rules = [
         [r'(\b|-|а|е|о|у|ў|ю|́)е', r'\1э̀'],
         [r'(\b|-|а|е|о|у|ў|ю|́)ё', r'\1ӭ'],
@@ -210,10 +216,15 @@ def make_local_dictionary(file_path, word_list):
     # print(UK_dict)
 
     phonet_dict = dict()
-    for word in word_list:
-        if word in US_dict:
-            phonet_dict[word] = US_dict[word]
-        elif word in UK_dict:
+    # for word in word_list:
+    #     if word in US_dict:
+    #         phonet_dict[word] = US_dict[word]
+    #     elif word in UK_dict:
+    #         phonet_dict[word] = UK_dict[word]
+    for word in US_dict:
+        phonet_dict[word] = US_dict[word]
+    for word in UK_dict:
+        if not word in phonet_dict:
             phonet_dict[word] = UK_dict[word]
 
     cyr_dict = {word:user_dict[word] for word in user_dict}
@@ -222,33 +233,75 @@ def make_local_dictionary(file_path, word_list):
             cyr_dict[word] = phonet_cyr(word, phonet_dict[word], rules)
     for word in word_list:
         if not word in cyr_dict:
-            attempt = try_breaking(word, cyr_dict)
+            attempt = try_breaking(word, cyr_dict, phonet_dict, rules)
             if attempt:
                 cyr_dict[word] = attempt
             else:
                 print('Not found:', word)
                 cyr_dict[word] = translit_cyr(word)
     cyr_dict = postprocess(cyr_dict, user_dict, full_normalization=False)
+    cyr_dict = eval(hyphenate_code(repr(cyr_dict)))
+    # print('make_local_dictionary', cyr_dict)
 
     cyr_list = sorted([word+' = '+cyr_dict[word] for word in cyr_dict])
     cyr_list = '\n'.join(cyr_list)
     with open(local_dict_path, mode='wt', encoding='utf8') as f:
         f.write(cyr_list)
 
-    pickle.dump(cyr_dict, open(local_dict_pickle_path, mode='wb'))
+    if not 'default.txt' in file_path:
+        pickle.dump(cyr_dict, open(local_dict_pickle_path, mode='wb'))
 
     return cyr_dict
 
 
-def convert_file(file_path):
-    with open(file_path, mode='rt', encoding='utf8') as f:
-        code = f.read()
+def hyphenate_code(code):
+    # ¬
+    if hyphenate:
+        vow = 'аеёиоуыэюя'
+        dia = '́̀̈'
+        con = 'бвв̆гджзҙйклмнпрсҫтўфхцчшщ'
+        let = vow+dia+con+'ь'
+        vow, dia, con, let = [f'[{x}]' for x in [vow, dia, con, let]]
+        code = re.sub(r'('+let+'+)', r'<<\1>>', code)
+        code = re.sub(r'('+con+'ь?'+vow+')', r'¬\1', code)
+        code = re.sub(r'в¬̆', r'¬в̆', code)
+        code = re.sub(r'('+vow+'|'+dia+')('+vow+')', r'\1¬\2', code)
+        code = re.sub(r'('+vow+')¬й', r'\1й¬', code)
+        code = re.sub(r'('+vow+')¬й', r'\1й¬', code)
+        code = re.sub(r'(а|о)¬у', r'\1у', code)
+        for c in ['дж', 'жў']:
+            code = re.sub(c[0]+'¬'+c[1], '¬'+c, code)
+        code = re.sub(r'¬([лмнр])('+con+')', r'\1¬\2', code)
+        code = re.sub(r'¬([лмнр])('+con+')', r'\1¬\2', code)
+        code = re.sub(r'¬('+con+r')\1', r'\1¬\1', code)
+        code = re.sub(r'¬([лмнр])('+con+')', r'\1¬\2', code)
+        code = re.sub(r'([бгдкптф])¬([лр])', r'¬\1\2', code)
+        code = re.sub(r'¬('+con+')ли>>', r'\1¬ли', code)
+        code = re.sub(r'¬('+con+'+¬>>)', r'\1', code)
+        code = re.sub(r'¬>>', r'>>', code)
+        code = re.sub(r'<<¬', r'<<', code)
+        code = re.sub(r'¬('+vow+dia+'?)>>', r'\1>>', code)
+        code = re.sub(r'<<('+con+'+'+dia+'?|'+vow+dia+'?)¬', r'<<\1', code)
+
+        # print('HYPHEN', r'<<(.'+dia+'?)¬')
+        # print('HYPHEN', code)
+
+        code = re.sub(r'(<<|>>)', r'', code)
+        code = re.sub(r'¬', r'­', code)
+    else:
+        code = re.sub('¬','',code)
+    return code
+
+
+def convert_code(code, file_path=os.path.join(project_path, 'default.txt')):
+    code = re.sub(r'\{[^}]+\}\{=([^}]+)\}', r'\1', code) # {U.S.}{=Ю.С.}
+    code = re.sub(r'\{(\d)\}', r'\1', code) # use{1}
     code = re.split('(<[^>]+>)', code)
-    # print(code[:50])
+    # print(1, code[:50])
     word_list = list()
     for n, text in enumerate(code):
         if n%2 == 0:
-            local_list = re.findall('['+English_alphabet+'’]*['+English_alphabet+']', text.lower())
+            local_list = re.findall('['+English_alphabet+'’]*['+English_alphabet+'][0-9]?', text.lower())
             word_list += local_list
     word_list = sorted(list(set(word_list)))
     word_list_path = re.sub(r'\.[a-z]+\Z', '.WordList.txt', file_path)
@@ -259,6 +312,13 @@ def convert_file(file_path):
         if n%2 == 0:
             code[n] = convert_text(text, cyr_dict)
     code = ''.join(code)
+    return code
+
+
+def convert_file(file_path):
+    with open(file_path, mode='rt', encoding='utf8') as f:
+        code = f.read()
+    code = convert_code(code)
     output_path = re.sub(r'(.*)\.([a-zA-Z0-9]+)', r'\1.Cyr.\2', file_path)
     with open(output_path, mode='wt', encoding='utf8') as f:
         f.write(code)
@@ -272,6 +332,14 @@ def main():
     )
 
     convert_file(file_path)
+
+    print(convert_code('''
+    Artemis’s
+    '''))
+
+    print(watch)
+
+    # print(hyphenate_code('араунд'))
 
 
 if __name__ == '__main__':
