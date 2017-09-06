@@ -7,29 +7,46 @@ import pickle
 # https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F
 
 project_path = {
-    'DESKTOP-62BVD4A': 'd:\KPV\Github\Ango-Russian_schoolhouse_transcription',
-    'hellerick-C17A': r'/home/hellerick/PycharmProjects/Ango-Russian_schoolhouse_transcription'
+    'DESKTOP-62BVD4A': 'd:\KPV\Github\English_Cyrillic_script',
+    'hellerick-C17A': r'/home/hellerick/PycharmProjects/English_Cyrillic_script'
 }[platform.node()]
 
+Hellerick_2015 = 'H15'
+Schoolhouse = 'SCH'
 
-English_alphabet = 'abcdefghijklmnopqrstuvwxyzáâéëíïú'
+system = 'H15'
+
+English_alphabet = 'abcdefghijklmnopqrstuvwxyzáâéëíïúſ'
 
 hyphenate = True
 
 
 def translit_cyr(word):
-    translit_pairs=[
-        ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ья'], ['ye', 'ье'],
-        ['yi', 'ьи'], ['yo', 'ьо'], ['yu', 'ью'], ['ch', 'ч'], 
-        ['sh', 'ш'], ['th', 'т'],
-        ['yá', 'ья́'],
-        ['a', 'а'], ['b', 'б'], ['c', 'к'],
-        ['d', 'д'], ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'и'],
-        ['j', 'дж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
-        ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
-        ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з'],
-        ['á', 'а́']
-    ]
+    if system == 'H15':
+        translit_pairs=[
+            ['ce', 'се'], ['ci', 'сі'], ['cy', 'сі'], ['ya', 'іа'], ['ye', 'іе'],
+            ['yi', 'іі'], ['yo', 'іо'], ['yu', 'ю'], ['ch', 'ч'],
+            ['sh', 'ш'], ['th', 'ѳ'],
+            ['a', 'а'], ['b', 'б'], ['c', 'к'],
+            ['d', 'д'], ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'і'],
+            ['j', 'џ'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
+            ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
+            ['u', 'у'], ['v', 'в'], ['w', 'ѵ'], ['x', 'кс'], ['y', 'і'], ['z', 'з'],
+            ['á', 'а́']
+        ]
+    elif system == 'HCF':
+        translit_pairs=[
+            ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ья'], ['ye', 'ье'],
+            ['yi', 'ьи'], ['yo', 'ьо'], ['yu', 'ью'], ['ch', 'ч'],
+            ['sh', 'ш'], ['th', 'т'],
+            ['yá', 'ья́'],
+            ['a', 'а'], ['b', 'б'], ['c', 'к'],
+            ['d', 'д'], ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'и'],
+            ['j', 'дж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
+            ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
+            ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з'],
+            ['á', 'а́']
+        ]
     for pair in translit_pairs:
         word = word.replace(*pair)
     word = re.sub(r'(\A|[аеиоуяю])ь', r'\1', word)
@@ -153,7 +170,7 @@ def dialog_mode(cyr_dict):
 
 def make_local_dictionary(file_path, word_list):
     local_dict_path = re.sub(r'\.[a-z]+\Z', '.Dictionary.txt', file_path)
-    user_dict_path = os.path.join(project_path, 'Dictionaries', 'User_dict.txt')
+    user_dict_path = os.path.join(project_path, 'Dictionaries', 'User_dict.'+system+'.txt')
     US_dict_path = os.path.join(project_path, 'Dictionaries', 'cmudict.0.7a')
     UK_dict_path = os.path.join(project_path, 'Dictionaries', 'beep-1.0')
     local_dict_path = os.path.join(project_path, 'Dictionaries', 'Local_dict.txt')
@@ -162,7 +179,7 @@ def make_local_dictionary(file_path, word_list):
     if os.path.exists(local_dict_pickle_path):
         return pickle.load(open(local_dict_pickle_path, mode='rb'))
 
-    rules_path = os.path.join(project_path, 'Transcription_rules.txt')
+    rules_path = os.path.join(project_path, 'Transcription_rules.'+system+'.txt')
     with open(rules_path, mode='rt', encoding='utf8') as f:
         rules =  f.read()
 
@@ -184,6 +201,7 @@ def make_local_dictionary(file_path, word_list):
         user_dict =  f.read()
     user_dict = re.sub(r'  +', r' ', user_dict)
     user_dict = re.sub(r'#.*?\n', r'\n', user_dict)
+    user_dict = re.sub(r' ?\n ?', r'\n', user_dict)
     user_dict = user_dict.split('\n')
     user_dict = [re.sub(r'(.*)#.*', r'\1', line) for line in user_dict]
     user_dict = [line for line in user_dict if line != '']
@@ -239,7 +257,8 @@ def make_local_dictionary(file_path, word_list):
             else:
                 print('Not found:', word)
                 cyr_dict[word] = translit_cyr(word)
-    cyr_dict = postprocess(cyr_dict, user_dict, full_normalization=False)
+    if system=='SCH':
+        cyr_dict = postprocess(cyr_dict, user_dict, full_normalization=False)
     cyr_dict = eval(hyphenate_code(repr(cyr_dict)))
     # print('make_local_dictionary', cyr_dict)
 
@@ -257,11 +276,12 @@ def make_local_dictionary(file_path, word_list):
 def hyphenate_code(code):
     # ¬
     if hyphenate:
-        vow = 'аеёиоуыэюя'
+        vow = 'аеёиіоуъыэюяѵѡ'
         dia = '́̀̈'
-        con = 'бвв̆гджзҙйклмнпрсҫтўфхцчшщ'
+        con = 'бвв̆гджзҙѕйіклмнпрсҫтўфхцчшщѵѳџ'
+        trucon = re.sub('[іѵ]', '', con)
         let = vow+dia+con+'ь'
-        vow, dia, con, let = [f'[{x}]' for x in [vow, dia, con, let]]
+        vow, dia, con, let, trucon = [f'[{x}]' for x in [vow, dia, con, let, trucon]]
         code = re.sub(r'('+let+'+)', r'<<\1>>', code)
         code = re.sub(r'('+con+'ь?'+vow+')', r'¬\1', code)
         code = re.sub(r'в¬̆', r'¬в̆', code)
@@ -269,23 +289,22 @@ def hyphenate_code(code):
         code = re.sub(r'('+vow+')¬й', r'\1й¬', code)
         code = re.sub(r'('+vow+')¬й', r'\1й¬', code)
         code = re.sub(r'(а|о)¬у', r'\1у', code)
-        for c in ['дж', 'жў']:
+        for c in ['дж', 'жў', 'іу']:
             code = re.sub(c[0]+'¬'+c[1], '¬'+c, code)
-        code = re.sub(r'¬([лмнр])('+con+')', r'\1¬\2', code)
-        code = re.sub(r'¬([лмнр])('+con+')', r'\1¬\2', code)
+        for c in ['еі', 'аі', 'аѵ', 'оі', 'оѵ', 'ѵе', 'ѵі', 'ѵо', 'іа', 'іѵ']:
+            code = re.sub(c[0]+'¬'+c[1], c, code)
+        code = re.sub(r'¬([лмнр])('+trucon+')', r'\1¬\2', code)
+        code = re.sub(r'¬([лмнр])('+trucon+')', r'\1¬\2', code)
         code = re.sub(r'¬('+con+r')\1', r'\1¬\1', code)
-        code = re.sub(r'¬([лмнр])('+con+')', r'\1¬\2', code)
+        code = re.sub(r'¬([лмнр])('+trucon+')', r'\1¬\2', code)
         code = re.sub(r'([бгдкптф])¬([лр])', r'¬\1\2', code)
         code = re.sub(r'¬('+con+')ли>>', r'\1¬ли', code)
         code = re.sub(r'¬('+con+'+¬>>)', r'\1', code)
         code = re.sub(r'¬>>', r'>>', code)
-        code = re.sub(r'<<¬', r'<<', code)
+        code = re.sub(r'<<¬+', r'<<', code)
+        # print('HYPHEN', code[-50:])
         code = re.sub(r'¬('+vow+dia+'?)>>', r'\1>>', code)
-        code = re.sub(r'<<('+con+'+'+dia+'?|'+vow+dia+'?)¬', r'<<\1', code)
-
-        # print('HYPHEN', r'<<(.'+dia+'?)¬')
-        # print('HYPHEN', code)
-
+        code = re.sub(r'<<('+trucon+'+'+dia+'?|'+vow+dia+'?)¬', r'<<\1', code)
         code = re.sub(r'(<<|>>)', r'', code)
         code = re.sub(r'¬', r'­', code)
     else:
@@ -297,7 +316,6 @@ def convert_code(code, file_path=os.path.join(project_path, 'default.txt')):
     code = re.sub(r'\{[^}]+\}\{=([^}]+)\}', r'\1', code) # {U.S.}{=Ю.С.}
     code = re.sub(r'\{(\d)\}', r'\1', code) # use{1}
     code = re.split('(<[^>]+>)', code)
-    # print(1, code[:50])
     word_list = list()
     for n, text in enumerate(code):
         if n%2 == 0:
@@ -331,15 +349,19 @@ def main():
         'Eoin Colfer. Artemis Fowl 01.html'
     )
 
+    file_path = r'/home/hellerick/Dropbox/Lib/Fiction/Stewart, Mary/Stewart, Mary - The Little Broomstick.code.txt'
+
     convert_file(file_path)
 
-    print(convert_code('''
-    Artemis’s
+    if False:
+        print(convert_code('''
+    foreign
     '''))
 
+    # print(convert_code('''sometimes'''))
     print(watch)
 
-    # print(hyphenate_code('араунд'))
+    # print(hyphenate_code('іу'))
 
 
 if __name__ == '__main__':
