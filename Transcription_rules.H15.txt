@@ -122,7 +122,7 @@ eo = AW1 = аѵ
 eous = IY0 AH0 S = еос
 er = ER0|AH0|AX = ер
 er = ER0 R = ер
-er = AA1 R|AA1 = ар
+er = AA1 R|AA1|AA = ар
 er = ER1|ER2|ER = ър
 err = ER1|ER2|ER = ърр
 ere = IY1 R|IA1 = ір
@@ -160,6 +160,7 @@ i = - = -
 i = AY1|AY = аі
 i = IH1|IH2|IH|AH0|IY0|IY|Y IH1|AX = і
 i = IY1 = и
+i = Y = і
 ia = AY1 AH0|AY1 AE0 = аіа
 ia = IA = іа
 ia = AY1 = аі
@@ -337,7 +338,7 @@ u = Y UW1|Y UW2|Y UW = іу
 u = Y UW0|Y AH0|Y UH = іѵ
 u = Y AH0 W = іѵ
 u = UH1|UH2|UH = ѵ
-u = UW1 = у
+u = UW1|UW = у
 u = AH1|AH2 = ъ
 u = AH = ъ
 u = AH0|AX|IH0 = ѵ

@@ -12,6 +12,11 @@ project_path = {
     'Superkomp': r'D:\HCF\PyCharmProjects\English_Cyrillic_script',
 }[platform.node()]
 
+dropbox_path = {
+    'hellerick-C17A': r'/home/hellerick/Dropbox',
+    'Superkomp': r'D:\HCF\Dropbox',
+}[platform.node()]
+
 Hellerick_2015 = 'H15'
 Schoolhouse = 'SCH'
 
@@ -351,7 +356,7 @@ def main():
     )
 
     file_path = r'/home/hellerick/Dropbox/Lib/Fiction/Stewart, Mary/Stewart, Mary - The Little Broomstick.code.txt'
-    file_path = r'D:\HCF\Dropbox\Job-shared\Lib\Vonnegut, Kurt\Kurt Vonnegut Welcome to the Monkey House Stories.html'
+    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Vonnegut, Kurt', 'Kurt Vonnegut Welcome to the Monkey House Stories.html')
 
     convert_file(file_path)
 
