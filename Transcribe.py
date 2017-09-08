@@ -8,7 +8,8 @@ import pickle
 
 project_path = {
     'DESKTOP-62BVD4A': 'd:\KPV\Github\English_Cyrillic_script',
-    'hellerick-C17A': r'/home/hellerick/PycharmProjects/English_Cyrillic_script'
+    'hellerick-C17A': r'/home/hellerick/PycharmProjects/English_Cyrillic_script',
+    'Superkomp': r'D:\HCF\PyCharmProjects\English_Cyrillic_script',
 }[platform.node()]
 
 Hellerick_2015 = 'H15'
@@ -350,6 +351,7 @@ def main():
     )
 
     file_path = r'/home/hellerick/Dropbox/Lib/Fiction/Stewart, Mary/Stewart, Mary - The Little Broomstick.code.txt'
+    file_path = r'D:\HCF\Dropbox\Job-shared\Lib\Vonnegut, Kurt\Kurt Vonnegut Welcome to the Monkey House Stories.html'
 
     convert_file(file_path)
 

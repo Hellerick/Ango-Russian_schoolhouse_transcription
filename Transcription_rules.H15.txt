@@ -52,6 +52,7 @@ b = - = -
 burgh = B ER0 OW0 = бѵро
 c = S = с
 c = K = к
+c = CH = ч
 call = K L = кл
 cc = K = к
 cqu = K W = кѵ
@@ -235,6 +236,7 @@ oa = AO1|AO2 = ѡ
 oar = AO1 R|AH0 R|ER0 = ор
 oe|œ = IY1 = и
 oi|oy = OY = оі
+oi|eoi = W AH0|W AA1 = ѵа
 oid = OY D = оід
 old = OW1 L D = олд
 oo = UH1|UH2|UH = ѵ
