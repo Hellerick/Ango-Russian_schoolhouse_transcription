@@ -2,8 +2,8 @@
 a = а # chars: џѳ(­)
 aah = аа
 aaah = ааа
-ablative = аблатів # отделительный падеж
-ablative2 = аблеітів # абляционный, удаляемый
+ablative = аблатів # case
+ablative2 = аблеітів # tending to be removed
 ablaze = аблеіз
 abohalima = абохаліма
 abracadabra = абракадабра
