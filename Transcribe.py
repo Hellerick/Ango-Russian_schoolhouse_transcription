@@ -19,8 +19,9 @@ dropbox_path = {
 
 Hellerick_2015 = 'H15'
 Schoolhouse = 'SCH'
+Socialist_English_alphabet = 'SEA'
 
-system = 'H15'
+system = 'SEA'
 
 English_alphabet = 'abcdefghijklmnopqrstuvwxyzáâéëíïúſ'
 
@@ -40,7 +41,7 @@ def translit_cyr(word):
             ['u', 'у'], ['v', 'в'], ['w', 'ѵ'], ['x', 'кс'], ['y', 'і'], ['z', 'з'],
             ['á', 'а́']
         ]
-    elif system == 'HCF':
+    elif system == 'SCH':
         translit_pairs=[
             ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ья'], ['ye', 'ье'],
             ['yi', 'ьи'], ['yo', 'ьо'], ['yu', 'ью'], ['ch', 'ч'],
@@ -53,10 +54,24 @@ def translit_cyr(word):
             ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з'],
             ['á', 'а́']
         ]
+    elif system == 'SEA':
+        translit_pairs=[
+            ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ја'], ['ye', 'је'],
+            ['yi', 'ји'], ['yo', 'јо'], ['yu', 'ју'], ['ch', 'ч'],
+            ['sh', 'ш'], ['th', 'ԏ'], ['wh', 'ү'],
+            ['yá', 'ја́'],
+            ['a', 'а'], ['b', 'б'], ['c', 'к'],
+            ['d', 'д'], ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'и'],
+            ['j', 'ж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
+            ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
+            ['u', 'у'], ['v', 'в'], ['w', 'ү'], ['x', 'кс'], ['y', 'и'], ['z', 'з'],
+            ['á', 'а́']
+        ]
     for pair in translit_pairs:
         word = word.replace(*pair)
     word = re.sub(r'(\A|[аеиоуяю])ь', r'\1', word)
-    word = re.sub(r'(\A|[аеиоуяю])е', r'\1э', word)
+    if system == 'SCH':
+        word = re.sub(r'(\A|[аеиоуяю])е', r'\1э', word)
     return word
 
 
