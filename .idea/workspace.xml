@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e30ff180-2d6d-4184-98e5-f6c02133fcd2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>close</find>
+      <find>th</find>
+      <find>dh</find>
+      <find>dyu</find>
+      <find>SCHEDUL</find>
+      <find>for supervïzorz</find>
+      <find>PRESSURE</find>
+      <find>WITHSTAND</find>
+      <find>\bEVEN</find>
+      <find>We use</find>
+      <find>kə</find>
+      <find>as soon</find>
+      <find>they'</find>
+      <find>’</find>
+      <find>ë</find>
+      <find>\bINCLU</find>
+      <find>\bVALUE</find>
+      <find>they</find>
+      <find>the company</find>
+      <find>'</find>
+      <find>iy</find>
+      <find>haass</find>
+      <find>surveil</find>
+      <find>triumph</find>
+      <find>weapon</find>
+      <find>persedential</find>
+      <find>pleasur</find>
+      <find>up</find>
+      <find>presidential</find>
+      <find>þ</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ꚋ</replace>
+      <replace>sh</replace>
+      <replace>ð</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="142" />
+    <option name="y" value="220" />
+    <option name="width" value="894" />
+    <option name="height" value="790" />
+  </component>
+  <component name="ProjectId" id="1fqXs9celabV89RKx3anmxhugBD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Programming/Python/Exhentai downloader" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Dictionaries" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Transcribe" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="English_Cyrillic_script" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Transcribe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Transcribe" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e30ff180-2d6d-4184-98e5-f6c02133fcd2" name="Default Changelist" comment="" />
+      <created>1536248977365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536248977365</updated>
+    </task>
+    <task id="LOCAL-00001" summary="From Home">
+      <created>1536254496336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536254496336</updated>
+    </task>
+    <task id="LOCAL-00002" summary="From Home">
+      <created>1536254753229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1536254753229</updated>
+    </task>
+    <task id="LOCAL-00003" summary="From Home">
+      <created>1596945329343</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596945329343</updated>
+    </task>
+    <task id="LOCAL-00004" summary="From Home">
+      <created>1596945472176</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596945472176</updated>
+    </task>
+    <task id="LOCAL-00005" summary="From Home">
+      <created>1596947222215</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596947222215</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="From Home" />
+    <option name="LAST_COMMIT_MESSAGE" value="From Home" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="405" y="57" width="806" height="880" key="CommitChangelistDialog2" timestamp="1596947221706">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="405" y="57" width="806" height="880" key="CommitChangelistDialog2/0.0.1920.1053@0.0.1920.1053" timestamp="1596947221706" />
+    <state x="464" y="162" width="992" height="731" key="SettingsEditor" timestamp="1596947191729">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="464" y="162" width="992" height="731" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1596947191729" />
+  </component>
+</project>
