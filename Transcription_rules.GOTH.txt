@@ -1,0 +1,506 @@
+’ = - = ’
+aa = AA1 = 𐌰𐌰
+a = AE0|AO|AA|AX|IH = 𐌰
+a = AE1|AE = 𐌰
+a = AH0 = 𐌰
+a = AO1|AO0|AA1|AA0 = 𐍉
+\Abe = B IY2 = 𐌱𐌴
+ae|æ = AE1 = 𐌰
+ae|æ = IY1|IY = 𐌹
+a = EH1|EH2|EH = 𐌴
+ael = L = 𐌴𐌻
+aer|ær = AA1 R = 𐌰𐍂
+aer = EH1 R|EH2 R|EA R = 𐌴𐌹𐍂
+a = EY1|EY2|EY = 𐌰̈
+age = IH0 JH = 𐌰𐌲̈
+ai = AH0 = 𐌴
+ai = AY1|AY2 = 𐌰𐌹
+ai = - = 𐌴
+ai = EY1|EY2|EY = 𐌴𐌹
+aign = EY1 N = 𐌴𐌹𐌽
+a = IH0 = 𐌹
+ai = IH0|IY0 = 𐌹
+ai = IY1 = 𐌹
+air|aire|ayr = EH1 R|EA R = 𐌴𐌹𐍂
+airl = EH1 L|EA L = 𐌴𐌹𐍂𐌻
+airs = EA Z = 𐌴𐌹𐍂𐌶
+a = IY1 = 𐌹
+al = AO0 L = 𐍉𐌻
+al = AO1 L = 𐍉𐌻
+al = AO2 L = 𐍉𐌻
+alb = AO0 L B = 𐍉𐌻𐌱
+#al/C = AA1 L = 𐍉𐍁𐌻
+#al/C = AA1 = 𐍉𐍁
+#al/C = AEl = 𐌰𐌻
+alk = AO2 K|AO1 K = 𐍁𐌿𐌺
+all = AH0 L = 𐌰𐌻
+all = AO1 L|AO2 L = 𐍉𐌻
+al = L|AX L|AH0 L = 𐌰𐌻
+allu = AH0 L UW2|AH0 L UW1 = 𐌰𐌻𐌿̈
+alm = AA1 M = 𐌰𐌻𐌼
+ao = AO1 = 𐌰𐍉
+ar = AA1 R|ER0|R|EH0 R = 𐌰𐍂
+are = AA1 R|AE1 R|ER0|R|EH0 R = 𐌰𐍂
+are = EH1 R|EH2 R|EA R|EA = 𐌰̈𐍂
+ar = EH1 R|EH2 R|EA R = 𐌴𐌹𐍂
+aren = EH1 R AH0 N = 𐌴𐌹𐍂𐌴𐌽
+ari|ary = ER0 R IY0|EH2 R IY0 = 𐌰𐍂𐌹
+arr = AE1 R = 𐌰𐍂
+arred\b = AA1 R D = 𐌰𐍂𐌳
+arr = EH1 R = 𐌴𐍂𐍂
+arr = ER0 = 𐌰𐍂
+au|aw = AO1|AO2|AH1|AA1|AO = 𐍁𐌿
+au|aw = AW1|AW = 𐌰𐌿
+augh = AO1|AO2|AO = 𐍁𐌿
+au = OH = 𐍉
+au = OW = 𐍉𐌿
+aur|awr = ER0 = 𐍁𐌿𐍂
+ay = AY1|AY2 = 𐌰𐌹
+ayer = EH1 R = 𐌴𐌹𐌴𐍂
+ay = EY1|EY2|EY = 𐌴𐌹
+ay = IH0|IY0 = 𐌹
+ay = IY1 = 𐌹
+b = - = -
+b = B = 𐌱
+bb = B = 𐌱
+\binterr = IH2 N T ER0 = 𐌹𐌽𐍄𐌴𐍂𐍂
+\bps = S = 𐍀𐍃
+\brea = R IY2 AH0 = 𐍂𐌴𐌰
+\bre = R IY2 = 𐍂𐌴
+\bun = AH0 N = 𐍁𐌽
+\bunu = AH0 N Y UW1 = 𐍁𐌽𐌿̈
+burgh = B ER0 OW0 = 𐌱𐌴𐍂𐍉
+call = K L = 𐌺𐌻
+c = CH = 𐌺̈
+cc = K = 𐌺
+cc = K S = 𐌺𐍇
+ce\b = S = 𐍇
+ced\b = S T = 𐍇𐍄
+cely = S L IY0 = 𐍇𐌻𐌹
+ch = CH = 𐌺̈
+chew = CH UW1 = 𐌺̈𐌿̈
+ch = K = 𐌺
+ch = SH = 𐍃̈
+cially = SH L IY0 = 𐍇𐌹𐌰𐌻𐌻𐌹
+cial = SH L = 𐍇𐌹𐌰𐌻
+cian = SH N = 𐍇𐌹𐌰𐌽
+cia = SH AH0 = 𐍇𐌹𐌰
+cia = SH IY0 EY2 = 𐍇𐌹𐌰̈
+cie = CH AH0 = 𐍇𐌹𐌴
+cie = SH AH0 = 𐍇𐌹𐌴
+cious = SH AH0 S|SH AX S = 𐍇𐌹𐍉𐍃
+ci = SH IY0 = 𐍇𐌹
+c = K = 𐌺
+ck = K = 𐌺
+cqu = K W = 𐌺𐍅
+c = S = 𐍇
+c = SH = 𐍇𐌹
+cts = K S = 𐌺𐍄𐍃
+ct = T = 𐌺𐍄
+d = - = -
+’d = AH0 D|IH0 D = ’𐌳
+dal = D L = 𐌳𐌰𐌻
+dar = D R = 𐌳𐍂
+d = D = 𐌳
+dd = D = 𐌳
+ddle = D L|D AH0 L = 𐌳𐌴𐌻
+ddles = D L Z|D AH0 L Z = 𐌳𐌴𐌻𐌶
+ddled = D L D|D AH0 L D = 𐌳𐌴𐌻𐌳
+d = JH = 𐌳𐌾
+dled = D L D = 𐌳𐌴𐌻𐌳
+d = T = 𐍄
+du = D UW2|D UW1|D UH1 = 𐌳𐌿̈
+du = JH UW0|JH UH0|JH AH0 = 𐌳𐌿̈
+du = D Y AH0 = 𐌳𐌿̈
+dier = JH ER0 = 𐌳𐌹𐌴𐍂
+e = - = -
+ea = EH1|EH = 𐌴
+ea = EY1 = 𐌴𐌹
+ea = IH1 = 𐌹
+ea = IY0 EY1 = 𐌴𐌴𐌹
+ea = IY1|IY = 𐌹𐌹
+ea = IY1 R|IA1|IY AX = 𐌴̈𐌰
+ean = IY1 AH0 N = 𐌴̈𐌰𐌽
+ear = AH0 = 𐌴𐍂
+ear = EH1 R = 𐌴𐍂
+ear = ER1 = 𐍁𐍂
+ear = IA R = 𐌴̈𐍂
+ear = IY1 R|IH2 R|IA = 𐌹𐍂
+eau = Y UW1 = 𐌿̈
+ea = Y AH0 = 𐌾𐌰
+e\b = EY2 = 𐌴
+e = EH1|AH0|IH0|EH2|AX|EH|IY0 = 𐌴
+ee = IY1|IY|IH1 = 𐌹𐌹
+eer = IY1 R|IH1 R|IA = 𐌹𐍂
+e = EY0 = 𐌴
+e = EY1|EY2|EY = 𐌴𐌹
+ei = AY1 = 𐌰𐌹
+ei = EY1 = 𐌴𐌹
+eigh = AY1 = 𐍁𐌹
+eigh = EY1 = 𐌴𐌹
+eign = AH0 N = 𐌴𐌽
+e = IH1 = 𐌹
+e = IH = 𐌴
+ei = IH1 = 𐌹
+ei = IY1 = 𐌴̈
+ei = IY1 IH0 = 𐌴̈𐌹
+eir = IY1 R|IA = 𐌴̈𐍂
+e = IY1|IY2|IY = 𐌴̈
+el = AX L = 𐌴𐌻
+eo = AH0 = 𐌴
+eo = AW1 = 𐌰𐌿
+eo = EH1 = 𐌴
+eo = IH1 = 𐌹
+eo = IY0 OW0|IY0 AH0 = 𐌴𐍉
+eo = IY1|IY = 𐌴̈
+eous = IY0 AH0 S|IA S = 𐌴𐍉𐍃
+er = AA1 R|AA1|AA = 𐌰𐍂
+er = EA = 𐌴𐍂
+ere = IY1 R|IA1 = 𐌴̈𐍂
+er = ER0|AH0|AX = 𐌴𐍂
+er = ER0 R = 𐌴𐍂
+er = ER1|ER2|ER = 𐍁𐍂
+er = IA = 𐌴̈𐍂
+er = IA R = 𐌴̈𐍂
+er = IH1 R = 𐌴̈𐍂
+erred = ER1 D = 𐍁𐍂𐌳
+err = EH2 R|EH1 R|IH0 R = 𐌴𐍂
+err = ER1|ER2|ER = 𐍁𐍂𐍂
+e’s = IH0 Z|IH Z = ’𐍃
+eu|ew = Y UH1 = 𐌴𐌿
+eu|ew = Y UW1|Y UW = 𐌴𐌿
+eur = Y UA R = 𐌴𐌿𐍂
+ewer = OW1 R|OW1 AH0 = 𐍉𐌿𐌴𐍂
+ewer = Y UH R|Y UA1 = 𐌴𐌿𐌴𐍂
+ewe = Y UW1 = 𐌴𐌿
+ew = OW1 = 𐍉𐌿
+ey\b = IY1 = 𐌹
+ey = EY1 = 𐌴𐌹
+ey = IH1 = 𐌹
+ey = IY1 = 𐌴̈
+f = F = 𐍆
+ff = F = 𐍆
+ffled = F L D = 𐍆𐌴𐌻𐌳
+fort = F T = 𐍆𐍉𐍂𐍄
+ful = F AH0 L|F AX L = 𐍆𐌿𐌻
+fully = F AH0 L IY0|F L IY0 = 𐍆𐌿𐌻𐌻𐌹
+f = V = 𐍅̈
+geo = JH AH0 = 𐌲̈𐍉
+ger = JH ER0 = 𐌲̈𐌴𐍂
+g = G = 𐌲
+gg = G = 𐌲
+gg = JH = 𐌲̈
+ggled = G L D = 𐌲𐌴𐌻𐌳
+gg = ZH = 𐌲̈
+gh = - = -
+gh = F = 𐍆
+gh = G HH = 𐌲𐌷
+g = JH = 𐌲̈
+gm = M = 𐌲𐌼
+gn = N = 𐌲𐌽
+gn = N Y = 𐌽𐌾
+gno = N Y AA0 = 𐌽𐌹𐍉
+guer = G ER0 = 𐌲𐌴𐍂
+g = ZH = 𐌲̈
+h = - = -
+h = HH = 𐌷
+i = - = -
+ia = AY1 AH0|AY1 AE0 = ï𐌰
+ia = AY1 = ï
+iage = IH0 JH = 𐌹𐌰𐌲̈
+ia = IA = 𐌹𐌰
+iar = AY1 ER|AY1 AH0 = ï𐌰𐍂
+iar = Y ER0 = 𐌹𐌰𐍂
+i = AY1|AY = ï
+ia = Y AH0 = 𐌹𐌰
+ie = AH0 = 𐌴
+ie = AY1 AH0 = ï𐌴
+ie = IA = 𐌹𐌴
+ie = IH1 = 𐌹
+ie = IY0 AH0|Y AH0 = 𐌹𐌴
+ie = IY1 = 𐌹𐌹
+ier = AY1 ER0|AY1 AH0 = ï𐌴𐍂
+ier = IY0 ER0|IA R = 𐌹𐌴𐍂
+ier = IY1 R|IA = 𐌹𐍂
+ieu = UW0 = 𐌿̈
+iew = Y UW2 = 𐌿̈
+igh = AY1|AY2 = 𐍁𐌹
+igh = IH1 G HH = 𐌹𐌲𐌷
+ign = AY1 N = 𐌰𐌹𐌽
+i = IH1|IH2|IH|AH0|IY0|IY|Y IH1|AX = 𐌹
+i = IY1 = 𐌹
+ing = IH0 N = 𐌹𐌽𐌲
+io = AH0|IH0 = 𐍉
+io = AY1 AH0 = ï𐍉
+io = - = 𐍉
+ior = Y ER0|IY0 ER0 = 𐌹𐍉𐍂
+iou = IY0 AH0 = 𐌹𐍉
+ious = AH0 S = 𐍉𐍃
+io = Y AH0|IA = 𐌹𐍉
+ir = AY1 ER0 = ï𐍂
+ir = AY1 ER0 R = ï𐍂
+ire = ER0 EH1 = 𐌹𐍂𐌴
+ire = IY1 R|IA1 = 𐌹𐍂
+ir = ER = 𐍁𐍂
+ir = IA = 𐌹𐍂
+ir = ER0 = 𐌹𐍂
+irr = IH1 R|IH0 R = 𐌹𐍂
+iu = IY0 AH0|IA = 𐌹𐌿
+i = Y = 𐌹
+jew = JH UW1|JH UW = 𐌲̈𐌴𐌿
+j = JH = 𐌲̈
+ju = JH UW0 = 𐌲̈𐌿̈
+k = K = 𐌺
+knew = N UW1 = 𐌺𐌽𐌴𐌿
+kn = N = 𐌺𐌽
+l = - = -
+l = AH0 L|AX L = 𐌻
+le = AH0 L = 𐌴𐌻
+leu|lew = L UW0 = 𐌻𐌴𐌿
+leu|lew = L UW1 = 𐌻𐌴𐌿
+’ll = AH0 L = ’𐌻
+l = L = 𐌻
+ll = L = 𐌻
+llu = L UW0 = 𐌻𐌿̈
+llu = L UW2|L UW1 = 𐌻𐌿̈
+lu = L UW0 = 𐌻𐌿̈
+lu = L UW2|L UW1 = 𐌻𐌿̈
+mc = M AH0 K = 𐌼𐌰𐌺
+m = M = 𐌼
+mm = M = 𐌼
+mn = M = 𐌼
+mpb = M B = 𐌼𐌱
+neu|new = N UW0 = 𐌽𐌴𐌿
+neu|new = N UW1 = 𐌽𐌴𐌿
+ng = NG = 𐌽𐌲
+ngth = NG K TH = 𐌽𐌲𐌸
+nm = M = 𐌽𐌼
+n = N|NG|AH0 N = 𐌽
+nn = N = 𐌽
+nu = N UW2|N UW1 = 𐌽𐌿̈
+oa = AO1|AO2|AO = 𐍁𐌿
+o = AH0|AA1|AA2|AA0|OW0|AX|OH|IH0 = 𐍉
+o = AH1|AH = 𐍁
+o = AO1|AO2|AO0 = 𐍉
+oa = OW1|OW = 𐍉𐌿
+oar = AO1 R|AO2 R|AH0 R|ER0 = 𐍉𐍂
+o\b = OW2 = 𐍉
+oe|œ = IY1|IY = 𐌴̈
+oid = OY D = 𐍉𐌹𐌳
+oi|eoi = W AH0|W AA1 = 𐌿𐌰
+o = IH = 𐌹
+oi = OY = 𐍉𐌹
+old = OW1 L D = 𐍉𐌻𐌳
+one = W AH0 N|W AH2 N|W AH1 N = 𐍅𐍁𐌽
+on = N = 𐍉𐌽
+oo = AH = 𐍁
+oo = OW = 𐍉𐌿
+oor|oore = AO1 R|AO2 R|AO = 𐍉𐍂
+oor|oore = UW1 R|UA = 𐌿𐍂
+oo = UH1|UH2|UH = 𐌿
+oo = UW1|UW = 𐌿
+o = OW1|OW2|OW = 𐍉̈
+oo = W AA1|W AA2 = 𐍅𐍉
+or = AH = 𐍉𐍂
+or = AO1 R|AO2 R|ER0|AH0|AO0 R|AO|AO R = 𐍉𐍂
+or = AO = 𐍉𐍂
+or = AO R = 𐍉𐍂
+ore = AO1 R|AO1 = 𐍉𐍂
+oreign = AO1 R AH0 N = 𐍉𐍂𐌴𐌽
+or = ER0 R = 𐍉𐍂
+or = ER|ER1 = 𐍁𐍂
+orr = AA1 R = 𐍉𐍂
+orr = AO0 R = 𐍉𐍂
+orr = AO1 R = 𐍉𐍂
+orr = AO2 R = 𐍉𐍂
+orr = ER0 = 𐍉𐍂
+orr = ER|ER1 = 𐍁𐍂𐍂
+or = R = 𐍉𐍂
+ou = AH0 = 𐌿
+ou = AH1 = 𐍁
+ou = AW1|AW = 𐌰𐌿
+ough = AA1|AO1|AO = 𐍁𐌿
+ough = AH1 F = 𐍁𐍆
+ough = AO1 HH = 𐍉𐌷
+ough = AW1 = 𐌰𐌿
+o = UH = 𐌿
+ould = OW1 L D = 𐍉𐌻𐌳
+ou = OW1 = 𐍉𐌿
+our = AO1 ER0|ER0|AH0|AO1 R|ER = 𐍉𐍂
+our = AO = 𐍉𐍂
+our = AW1 ER0|AW1 AH0 R = 𐌰𐌿𐍂
+our = ER1 = 𐌴𐍂
+our = UA R = 𐌿𐍂
+our = UA = 𐌿𐍂
+ous\b = AH0 S|IH0 S = 𐍉𐍃
+ousies\b = AH0 S IY0 = 𐍉𐍃𐌹𐌶
+ously\b = AH0 S L IY0|IH0 S L IY0 = 𐍉𐍃𐌻𐌹
+ousy\b = AH0 S IY0 = 𐍉𐍃𐌹
+ou = UH1|UH2|UH = 𐌿
+ou = UW1|UW = 𐌿
+o = UW1|UW = 𐌿
+over = OW1 V ER0 = 𐍉𐌿𐍅̈𐌴𐍂
+over = OW2 V ER0 = 𐍉𐌿𐍅̈𐌴𐍂
+ow = AA1 = 𐍉
+ow = AO1 = 𐍉𐍁
+ow = AW1|AW2|AW = 𐌰𐌿
+ower = AW1 ER0 = 𐌰𐌿𐌴𐍂
+ower = OW1 ER0 = 𐍉𐌿𐌴𐍂
+ow = OW1|OW0|OW = 𐍉𐌿
+oya = OY1 AH0 = 𐍉𐌾𐌰
+oy = OY = 𐍉𐌹
+p = - = -
+ph = F = 𐍆
+ph = P HH = 𐍀𐌷
+ph = V = 𐍅̈
+por = P R = 𐍀𐍉𐍂
+p = P = 𐍀
+pp = P = 𐍀
+q = K = 𐌺
+qua = K W AA1|K W OH|K W AO2|K W AO1 = 𐌺𐍅𐍉
+qu = K = 𐌺
+qu = K W = 𐌺𐍅
+r = ER0|AX R = 𐍂
+reu|rew = R UW2|R UW1|R UW = 𐍂𐌴𐌿
+r = - = 𐍂
+r = R = 𐍂
+ru = R UW0 = 𐍂𐌿̈
+ru = R UW2|R UW1|R UW = 𐍂𐌿̈
+s = - = -
+scious = SH AH0 S = 𐍃𐍇𐌹𐍉𐍃
+sc = S = 𐍃𐍇
+sen\b = N S N = 𐌽𐍃𐌴𐌽
+sens\b = N S N Z = 𐌽𐍃𐌴𐌽𐌶
+sew = S UW1 = 𐍃𐌴𐌿
+sh = S HH = 𐍃̈
+sh = SH = 𐍃̈
+’s = IH Z|EH1 S|IH0 Z = ’𐍃
+sm = Z AH0 M|Z AX M = 𐌶𐌼
+some = S AH1 M|S AH0 M = 𐍃𐍁𐌼
+s = SH = 𐍃𐌹
+ssion = SH AH0 N = 𐍃𐌹𐍉𐌽
+s = S = 𐍃
+ss = SH = 𐍃̈
+ss = S = 𐍃
+ssur = SH UH1 R|SH ER0 = 𐍃𐌿̈𐍂
+ssu = SH UW0 = 𐍃𐌿̈
+ss = Z = 𐌶
+stle\b = S L| S AH0 L = 𐍃𐌴𐌻
+stles\b = S L Z|S AH0 L Z = 𐍃𐌴𐌻𐌶
+sua = ZH UW2 AH0 = 𐌶𐌿̈𐌰
+super = S UW1 P ER0|S UW2 P ER0|S UW0 P ER0 = 𐍃𐌿𐍀𐌴𐍂
+sur = SH UH1 R = 𐍃̈𐌿𐍂
+sur = ZH ER0 = 𐌶𐌿̈𐍂
+su|sui = S UW1|S UW2 = 𐍃𐌿̈
+su = S UW0 = 𐍃𐌿
+s = ZH = 𐌶𐌹
+’s = Z = ’𐍃
+s = Z = 𐌶
+t = - = -
+tch = CH = 𐌺̈
+t = CH = 𐍄𐌹
+teur = CH ER2 = 𐍄𐌿̈𐍂
+tew = T UW1 = 𐍄𐌴𐌿
+th = DH = 𐌸
+thm = DH AH0 M = 𐌸𐌼
+th = T HH = 𐍄𐌷
+th = TH = 𐌸
+tia = CH AH0 = 𐍇𐌹𐌰
+tia = SH AH0 = 𐍇𐌹𐌰
+tie = SH AH0 = 𐍇𐌹𐌴
+tion = SH AH0 N = 𐍇𐌹𐍉𐌽
+tious = SH AH0 S|SH AX S = 𐍇𐌹𐍉𐍃
+ti = SH IY0 = 𐍇𐌹
+t = SH = 𐍇𐌹
+ts = T S = 𐍄𐍃
+t = T = 𐍄
+tt = T = 𐍄
+tua = CH AH0 W AH0|T Y UA = 𐍄𐌿̈𐌰
+tu = CH UH2 = 𐍄𐌿̈
+tu = CH UW0|CH AH0 = 𐍄𐌿̈
+tu = CH UW2 = 𐍄𐌿̈
+tuous = CH AH0 W AH0 S|CH UA S = 𐍄𐌿̈𐍉𐍃
+tur = CH ER0 = 𐍄𐌿̈𐍂
+tu = T UW0 = 𐍄𐌿̈
+tu = T UW2|T UW1 = 𐍄𐌿̈
+t = ZH = 𐌶𐌹
+tz = T S = 𐍄𐍃
+u = - = -
+ua = AH0 W AH0|UW2 AH0 = 𐌿𐌰
+ua = AH0 W EY1 = 𐌿𐌰̈
+u = AH0|AX|IH0 = 𐌿
+u = AH1|AH2 = 𐍁
+u = AH = 𐍁
+ua = Y AH0 = 𐌿̈𐌰
+ue = - = -
+ue = EH1 = 𐌴
+u = EH1 = 𐌴
+u = IH1 = 𐌹
+ui = IH1 = 𐌹
+uous = Y UA S = 𐌿̈𐍉𐍃
+ur = ER0 = 𐍁𐍂
+ur = ER1|AH0 = 𐍁𐍂
+ur = ER = 𐍁𐍂
+urr = ER0 = 𐍁𐍂
+urr = ER1|AH0 = 𐍁𐍂𐍂
+urr = ER = 𐍁𐍂
+ur|urr = Y ER0 = 𐌿̈𐍂
+ur = Y UA R = 𐌿̈𐍂
+u = UH1|UH2|UH = 𐌿
+u = UW1|UW = 𐌿
+u = W = 𐌿
+u = Y AH0 W = 𐌿̈
+u = Y UW0|Y AH0|Y UH = 𐌿̈
+u = Y UW1|Y UW2|Y UW = 𐌿̈
+’v = AH0 V = ’𐍅̈
+vor = V R = 𐍅̈𐍉𐍂
+v = V = 𐍅̈
+vv = V = 𐍅̈
+walk = W AO1 K = 𐍅𐍉𐍁𐌺
+ward = W ER0 D = 𐍅𐍉𐍂𐌳
+wa = W OH|W AA1|W AA2|W AO1|W AO = 𐍅𐍉
+what = W AH1 T|W AH2 T = 𐍅𐍉𐍄
+wh = HH W = 𐍈
+wh = W = 𐍈
+wh = HH = 𐌷
+wi = W AY1 = 𐍅𐌰𐌹
+wor = W ER1 = 𐍅𐍁𐍂
+wr = R = 𐍂
+wr = W R = 𐍅𐍂
+w = V = 𐍅̈
+w = W = 𐍅
+xc = K S = 𐌺𐍃𐍇
+x = G Z = 𐌺𐌶
+xious = K SH AH0 S = 𐌺𐍃𐌹𐍉𐍃
+x = K S = 𐌺𐍃
+x = Z = 𐌶
+y = AY1|AY2|AY0|AY = ï
+y\b = AY1|AY2|AY0|AY = 𐌰𐌹
+y = IH1|IY0|IY|IH0|IH|AH0 = 𐌹
+yr = ER0 = 𐌹𐍂
+yr = ER1 = 𐍁𐍂
+y = Y = 𐌾
+z = S|TH = 𐍃
+z = T S = 𐍄𐍃
+zz = T S = 𐍄𐍃
+z = Z = 𐌶
+zz = Z = 𐌶
+warr = W AO1 R = 𐍅𐍉𐍂
+pler = P L ER0 = 𐍀𐌻𐌴𐍂
+erri = ER0 IH1 = 𐌴𐍂𐌹
+wo = W OW1 = 𐍅𐍉𐌿
+alu = AH0 L UW1 = 𐌰𐌻𐌿̈
+stlers = S AH0 L ER0 Z = 𐍃𐌻𐌴𐍂𐌶
+stler = S AH0 L ER0 = 𐍃𐌻𐌴𐍂
+dua = JH AH0 W AH0|JH UW0 W AH0 = 𐌳𐌿̈𐌰
+dua = JH AH0 W EY2|JH UW0 EY2 = 𐌳𐌿̈𐌰̈
+pan = P N = 𐍀𐌰𐌽
+djur = JH UA = 𐌳𐌲̈𐌿𐍂
+ckg = G = 𐌺𐌲
+sw = S = 𐍃
+en = AA2 N = 𐌰𐌽
+eyr = EA R = 𐌴𐌹𐍂
+bol = B L = 𐌱𐍉𐌻
+xur = G ZH UA R = 𐌺𐍃𐌿̈𐍂
+ur = Y UA = 𐌿̈𐍂
+

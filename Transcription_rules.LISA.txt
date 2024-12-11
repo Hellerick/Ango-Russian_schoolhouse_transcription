@@ -1,0 +1,506 @@
+’ = - = ’
+aa = AA1 = aa
+a = AE0|AO|AA|AX|IH = a
+a = AE1|AE = a
+a = AH0 = a
+a = AO1|AO0|AA1|AA0 = o
+\Abe = B IY2 = be
+ae|æ = AE1 = a
+ae|æ = IY1|IY = i
+a = EH1|EH2|EH = e
+ael = L = el
+aer|ær = AA1 R = ar
+aer = EH1 R|EH2 R|EA R = eir
+a = EY1|EY2|EY = ä
+age = IH0 JH = aj
+ai = AH0 = e
+ai = AY1|AY2 = ai
+ai = - = e
+ai = EY1|EY2|EY = ei
+aign = EY1 N = ein
+a = IH0 = i
+ai = IH0|IY0 = i
+ai = IY1 = i
+air|aire|ayr = EH1 R|EA R = eir
+airl = EH1 L|EA L = eirl
+airs = EA Z = eirz
+a = IY1 = i
+al = AO0 L = ol
+al = AO1 L = ol
+al = AO2 L = ol
+alb = AO0 L B = olb
+#al/C = AA1 L = oəl
+#al/C = AA1 = oə
+#al/C = AEl = al
+alk = AO2 K|AO1 K = əuk
+all = AH0 L = al
+all = AO1 L|AO2 L = ol
+al = L|AX L|AH0 L = al
+allu = AH0 L UW2|AH0 L UW1 = alü
+alm = AA1 M = alm
+ao = AO1 = ao
+ar = AA1 R|ER0|R|EH0 R = ar
+are = AA1 R|AE1 R|ER0|R|EH0 R = ar
+are = EH1 R|EH2 R|EA R|EA = är
+ar = EH1 R|EH2 R|EA R = eir
+aren = EH1 R AH0 N = eiren
+ari|ary = ER0 R IY0|EH2 R IY0 = ari
+arr = AE1 R = ar
+arred\b = AA1 R D = ard
+arr = EH1 R = err
+arr = ER0 = ar
+au|aw = AO1|AO2|AH1|AA1|AO = əu
+au|aw = AW1|AW = au
+augh = AO1|AO2|AO = əu
+au = OH = o
+au = OW = ou
+aur|awr = ER0 = əur
+ay = AY1|AY2 = ai
+ayer = EH1 R = eier
+ay = EY1|EY2|EY = ei
+ay = IH0|IY0 = i
+ay = IY1 = i
+b = - = -
+b = B = b
+bb = B = b
+\binterr = IH2 N T ER0 = interr
+\bps = S = ps
+\brea = R IY2 AH0 = rea
+\bre = R IY2 = re
+\bun = AH0 N = ən
+\bunu = AH0 N Y UW1 = ənü
+burgh = B ER0 OW0 = bero
+call = K L = kl
+c = CH = ch
+cc = K = k
+cc = K S = kc
+ce\b = S = c
+ced\b = S T = ct
+cely = S L IY0 = cli
+ch = CH = ch
+chew = CH UW1 = chü
+ch = K = k
+ch = SH = sh
+cially = SH L IY0 = cialli
+cial = SH L = cial
+cian = SH N = cian
+cia = SH AH0 = cia
+cia = SH IY0 EY2 = ciä
+cie = CH AH0 = cie
+cie = SH AH0 = cie
+cious = SH AH0 S|SH AX S = cios
+ci = SH IY0 = cy
+c = K = k
+ck = K = k
+cqu = K W = kw
+c = S = c
+c = SH = ci
+cts = K S = kts
+ct = T = kt
+d = - = -
+’d = AH0 D|IH0 D = ’d
+dal = D L = dal
+dar = D R = dr
+d = D = d
+dd = D = d
+ddle = D L|D AH0 L = del
+ddles = D L Z|D AH0 L Z = delz
+ddled = D L D|D AH0 L D = deld
+d = JH = dy
+dled = D L D = deld
+d = T = t
+du = D UW2|D UW1|D UH1 = dü
+du = JH UW0|JH UH0|JH AH0 = dü
+du = D Y AH0 = dü
+dier = JH ER0 = dier
+e = - = -
+ea = EH1|EH = e
+ea = EY1 = ei
+ea = IH1 = i
+ea = IY0 EY1 = eei
+ea = IY1|IY = y
+ea = IY1 R|IA1|IY AX = ëa
+ean = IY1 AH0 N = ëan
+ear = AH0 = er
+ear = EH1 R = er
+ear = ER1 = ər
+ear = IA R = ër
+ear = IY1 R|IH2 R|IA = ir
+eau = Y UW1 = ü
+ea = Y AH0 = ya
+e\b = EY2 = e
+e = EH1|AH0|IH0|EH2|AX|EH|IY0 = e
+ee = IY1|IY|IH1 = y
+eer = IY1 R|IH1 R|IA = ir
+e = EY0 = e
+e = EY1|EY2|EY = ei
+ei = AY1 = ai
+ei = EY1 = ei
+eigh = AY1 = əi
+eigh = EY1 = ei
+eign = AH0 N = en
+e = IH1 = i
+e = IH = e
+ei = IH1 = i
+ei = IY1 = ë
+ei = IY1 IH0 = ëi
+eir = IY1 R|IA = ër
+e = IY1|IY2|IY = ë
+el = AX L = el
+eo = AH0 = e
+eo = AW1 = au
+eo = EH1 = e
+eo = IH1 = i
+eo = IY0 OW0|IY0 AH0 = eo
+eo = IY1|IY = ë
+eous = IY0 AH0 S|IA S = eos
+er = AA1 R|AA1|AA = ar
+er = EA = er
+ere = IY1 R|IA1 = ër
+er = ER0|AH0|AX = er
+er = ER0 R = er
+er = ER1|ER2|ER = ər
+er = IA = ër
+er = IA R = ër
+er = IH1 R = ër
+erred = ER1 D = ərd
+err = EH2 R|EH1 R|IH0 R = er
+err = ER1|ER2|ER = ərr
+e’s = IH0 Z|IH Z = ’s
+eu|ew = Y UH1 = eu
+eu|ew = Y UW1|Y UW = eu
+eur = Y UA R = eur
+ewer = OW1 R|OW1 AH0 = ouer
+ewer = Y UH R|Y UA1 = euer
+ewe = Y UW1 = eu
+ew = OW1 = ou
+ey\b = IY1 = i
+ey = EY1 = ei
+ey = IH1 = i
+ey = IY1 = ë
+f = F = f
+ff = F = f
+ffled = F L D = feld
+fort = F T = fort
+ful = F AH0 L|F AX L = ful
+fully = F AH0 L IY0|F L IY0 = fulli
+f = V = v
+geo = JH AH0 = jo
+ger = JH ER0 = jer
+g = G = g
+gg = G = g
+gg = JH = j
+ggled = G L D = geld
+gg = ZH = j
+gh = - = -
+gh = F = f
+gh = G HH = gh
+g = JH = j
+gm = M = gm
+gn = N = gn
+gn = N Y = ny
+gno = N Y AA0 = nio
+guer = G ER0 = ger
+g = ZH = j
+h = - = -
+h = HH = h
+i = - = -
+ia = AY1 AH0|AY1 AE0 = ïa
+ia = AY1 = ï
+iage = IH0 JH = iaj
+ia = IA = ia
+iar = AY1 ER|AY1 AH0 = ïar
+iar = Y ER0 = iar
+i = AY1|AY = ï
+ia = Y AH0 = ia
+ie = AH0 = e
+ie = AY1 AH0 = ïe
+ie = IA = ie
+ie = IH1 = i
+ie = IY0 AH0|Y AH0 = ie
+ie = IY1 = y
+ier = AY1 ER0|AY1 AH0 = = ïer
+ier = IY0 ER0|IA R = ier
+ier = IY1 R|IA = ir
+ieu = UW0 = ü
+iew = Y UW2 = ü
+igh = AY1|AY2 = əi
+igh = IH1 G HH = igh
+ign = AY1 N = ain
+i = IH1|IH2|IH|AH0|IY0|IY|Y IH1|AX = i
+i = IY1 = i
+ing = IH0 N = ing
+io = AH0|IH0 = o
+io = AY1 AH0 = ïo
+io = - = o
+ior = Y ER0|IY0 ER0 = ior
+iou = IY0 AH0 = io
+ious = AH0 S = os
+io = Y AH0|IA = io
+ir = AY1 ER0 = ïr
+ir = AY1 ER0 R = ïr
+ire = ER0 EH1 = ire
+ire = IY1 R|IA1 = ir
+ir = ER = ər
+ir = IA = ir
+ir = ER0 = ir
+irr = IH1 R|IH0 R = ir
+iu = IY0 AH0|IA = iu
+i = Y = i
+jew = JH UW1|JH UW = jeu
+j = JH = j
+ju = JH UW0 = jü
+k = K = k
+knew = N UW1 = kneu
+kn = N = kn
+l = - = -
+l = AH0 L|AX L = l
+le = AH0 L = el
+leu|lew = L UW0 = leu
+leu|lew = L UW1 = leu
+’ll = AH0 L = ’l
+l = L = l
+ll = L = l
+llu = L UW0 = lü
+llu = L UW2|L UW1 = lü
+lu = L UW0 = lü
+lu = L UW2|L UW1 = lü
+mc = M AH0 K = mak
+m = M = m
+mm = M = m
+mn = M = m
+mpb = M B = mb
+neu|new = N UW0 = neu
+neu|new = N UW1 = neu
+ng = NG = ng
+ngth = NG K TH = ngth
+nm = M = nm
+n = N|NG|AH0 N = n
+nn = N = n
+nu = N UW2|N UW1 = nü
+oa = AO1|AO2|AO = əu
+o = AH0|AA1|AA2|AA0|OW0|AX|OH|IH0 = o
+o = AH1|AH = ə
+o = AO1|AO2|AO0 = o
+oa = OW1|OW = ou
+oar = AO1 R|AO2 R|AH0 R|ER0 = or
+o\b = OW2 = o
+oe|œ = IY1|IY = ë
+oid = OY D = oid
+oi|eoi = W AH0|W AA1 = ua
+o = IH = i
+oi = OY = oi
+old = OW1 L D = old
+one = W AH0 N|W AH2 N|W AH1 N = wən
+on = N = on
+oo = AH = ə
+oo = OW = ou
+oor|oore = AO1 R|AO2 R|AO = or
+oor|oore = UW1 R|UA = ur
+oo = UH1|UH2|UH = u
+oo = UW1|UW = u
+o = OW1|OW2|OW = ö
+oo = W AA1|W AA2 = wo
+or = AH = or
+or = AO1 R|AO2 R|ER0|AH0|AO0 R|AO|AO R = or
+or = AO = or
+or = AO R = or
+ore = AO1 R|AO1 = or
+oreign = AO1 R AH0 N = oren
+or = ER0 R = or
+or = ER|ER1 = ər
+orr = AA1 R = or
+orr = AO0 R = or
+orr = AO1 R = or
+orr = AO2 R = or
+orr = ER0 = or
+orr = ER|ER1 = ərr
+or = R = or
+ou = AH0 = u
+ou = AH1 = ə
+ou = AW1|AW = au
+ough = AA1|AO1|AO = əu
+ough = AH1 F = əf
+ough = AO1 HH = oh
+ough = AW1 = au
+o = UH = u
+ould = OW1 L D = old
+ou = OW1 = ou
+our = AO1 ER0|ER0|AH0|AO1 R|ER = or
+our = AO = or
+our = AW1 ER0|AW1 AH0 R = aur
+our = ER1 = er
+our = UA R = ur
+our = UA = ur
+ous\b = AH0 S|IH0 S = os
+ousies\b = AH0 S IY0 = osiz
+ously\b = AH0 S L IY0|IH0 S L IY0 = osli
+ousy\b = AH0 S IY0 = osi
+ou = UH1|UH2|UH = u
+ou = UW1|UW = u
+o = UW1|UW = u
+over = OW1 V ER0 =ouver
+over = OW2 V ER0 =ouver
+ow = AA1 = o
+ow = AO1 = oə
+ow = AW1|AW2|AW = au
+ower = AW1 ER0 = auer
+ower = OW1 ER0 = ouer
+ow = OW1|OW0|OW = ou
+oya = OY1 AH0 = oya
+oy = OY = oi
+p = - = -
+ph = F = f
+ph = P HH = ph
+ph = V = v
+por = P R = por
+p = P = p
+pp = P = p
+q = K = k
+qua = K W AA1|K W OH|K W AO2|K W AO1 = quo
+qu = K = k
+qu = K W = qu
+r = ER0|AX R = r
+reu|rew = R UW2|R UW1|R UW = reu
+r = - = r
+r = R = r
+ru = R UW0 = rü
+ru = R UW2|R UW1|R UW = rü
+s = - = -
+scious = SH AH0 S = scios
+sc = S = sc
+sen\b = N S N = nsen
+sens\b = N S N Z = nsenz
+sew = S UW1 = seu
+sh = S HH = sh
+sh = SH = sh
+’s = IH Z|EH1 S|IH0 Z = ’s
+sm = Z AH0 M|Z AX M = zm
+some = S AH1 M|S AH0 M = səm
+s = SH = si
+ssion = SH AH0 N = sion
+s = S = s
+ss = SH = sh
+ss = S = s
+ssur = SH UH1 R|SH ER0 = sür
+ssu = SH UW0 = sü
+ss = Z = z
+stle\b = S L| S AH0 L = sel
+stles\b = S L Z|S AH0 L Z = selz
+sua = ZH UW2 AH0 = züa
+super = S UW1 P ER0|S UW2 P ER0|S UW0 P ER0 = super
+sur = SH UH1 R = shur
+sur = ZH ER0 = zür
+su|sui = S UW1|S UW2 = sü
+su = S UW0 = su
+s = ZH = zi
+’s = Z = ’s
+s = Z = z
+t = - = -
+tch = CH = ch
+t = CH = ti
+teur = CH ER2 = tür
+tew = T UW1 = teu
+th = DH = th
+thm = DH AH0 M = thm
+th = T HH = th
+th = TH = th
+tia = CH AH0 = cia
+tia = SH AH0 = cia
+tie = SH AH0 = cie
+tion = SH AH0 N = cion
+tious = SH AH0 S|SH AX S = cios
+ti = SH IY0 = ci
+t = SH = ci
+ts = T S = ts
+t = T = t
+tt = T = t
+tua = CH AH0 W AH0|T Y UA = tüa
+tu = CH UH2 = tü
+tu = CH UW0|CH AH0 = tü
+tu = CH UW2 = tü
+tuous = CH AH0 W AH0 S|CH UA S = tüos
+tur = CH ER0 = tür
+tu = T UW0 = tü
+tu = T UW2|T UW1 = tü
+t = ZH = zi
+tz = T S = ts
+u = - = -
+ua = AH0 W AH0|UW2 AH0 = ua
+ua = AH0 W EY1 = uä
+u = AH0|AX|IH0 = u
+u = AH1|AH2 = ə
+u = AH = ə
+ua = Y AH0 = üa
+ue = - = -
+ue = EH1 = e
+u = EH1 = e
+u = IH1 = i
+ui = IH1 = i
+uous = Y UA S = üos
+ur = ER0 = ər
+ur = ER1|AH0 = ər
+ur = ER = ər
+urr = ER0 = ər
+urr = ER1|AH0 = ərr
+urr = ER = ər
+ur|urr = Y ER0 = ür
+ur = Y UA R = ür
+u = UH1|UH2|UH = u
+u = UW1|UW = u
+u = W = u
+u = Y AH0 W = ü
+u = Y UW0|Y AH0|Y UH = ü
+u = Y UW1|Y UW2|Y UW = ü
+’v = AH0 V = ’v
+vor = V R = vor
+v = V = v
+vv = V = v
+walk = W AO1 K = woək
+ward = W ER0 D = word
+wa = W OH|W AA1|W AA2|W AO1|W AO = wo
+what = W AH1 T|W AH2 T = wot
+wh = HH W = w
+wh = W = w
+wh = HH = h
+wi = W AY1 = wai
+wor = W ER1 = wər
+wr = R = r
+wr = W R = wr
+w = V = v
+w = W = w
+xc = K S = xc
+x = G Z = x
+xious = K SH AH0 S = xios
+x = K S = x
+x = Z = z
+y = AY1|AY2|AY0|AY = ï
+y\b = AY1|AY2|AY0|AY = ai
+y = IH1|IY0|IY|IH0|IH|AH0 = i
+yr = ER0 = ir
+yr = ER1 = ər
+y = Y = y
+z = S|TH = s
+z = T S = ts
+zz = T S = ts
+z = Z = z
+zz = Z = z
+warr = W AO1 R = wor
+pler = P L ER0 = pler
+erri = ER0 IH1 = eri
+wo = W OW1 = wou
+alu = AH0 L UW1 = alü
+stlers = S AH0 L ER0 Z = slerz
+stler = S AH0 L ER0 = sler
+dua = JH AH0 W AH0|JH UW0 W AH0 = düa
+dua = JH AH0 W EY2|JH UW0 EY2 = düä
+pan = P N = pan
+djur = JH UA = djur
+ckg = G = kg
+sw = S = s
+en = AA2 N = an
+eyr = EA R = eir
+bol = B L = bol
+xur = G ZH UA R = xür
+ur = Y UA = ür
+

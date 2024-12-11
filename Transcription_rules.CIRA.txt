@@ -1,0 +1,574 @@
+#al/C = AA1 = аѵ
+#al/C = AA1 L = аѵл
+#al/C = AEl = ал
+<be = B IY2 = бе
+<ps = S = пс
+<re = R IY2 = ре
+<re = R IY = ре
+<rea = R IY2 AH0 = реа
+<un = AH0 N = ѵн
+<unu = AH0 N Y UW1 = ѵнұ
+a = AE0|{AO|AA|AX|IH|AH0|AA1|AA0|AH2 = а
+a = AE1|AE = а
+a = AO1|AO0|OH = о
+a = EH1|EH2|EH = е
+a = EY1|EY2|EY = ӕ
+a = IH0 = і
+a = IY1 = і
+ael = L = ел
+aer = EH1 R|EH2 R|EA R = ӕр
+aer|ær = AA1 R = ар
+ae|æ = AE1 = а
+ae|æ = IY1|IY = є
+age = IH0 JH = аж
+ah = AX = аа
+ai = - = е
+ai = AH0 = е
+aign = EY1 N = ејн
+air = EA = ӕр
+airl = EH1 L|EA L = ӕрл
+air|aire|ayr = EH1 R|EA R = ӕр
+ai\b|ay\b = AY1|AY2 = ај
+ai|ay = AY1|AY2 = и
+ai\b|ay\b = EY1|EY2|EY = еј
+ai = EY1|EY2|EY = ӕ
+ay = EY1|EY2|EY = ӕ
+ai|ay = IH0|IY0 = і
+ai|ay = IY1 = і
+al = AO0 L = ол
+al = AO = аѵ
+al = AO1 = аѵ
+al = AO1 L|AO2 L|AO L = ол
+al = L|AX L|AH0 L = ал
+alb = AO0 L B = олб
+alk = AO2 K|AO1 K = аѵк
+all = AH0 L = ал
+all = AO1 L|AO2 L = ол
+allu|alu = AH0 L UW2|AH0 L UW1 = алұ
+ally\b = AH0 L IY0 = аллі
+alm = AA1 M = алм
+ao = AO1 = ао
+ar = AA1 R|ER0|R|EH0 R|AA0 R = ар
+ar = EH1 R|EH2 R|EA R = ӕр
+are = AA1 R|AE1 R|ER0|R|EH0 R = ар
+are = EH1 R|EH2 R|EA R|EA = ӕр
+arer = EH1 R ER0|EH2 R ER0 = ӕрер
+ared = EH1 R D = ӕред
+aren = EH1 R AH0 N = ӕрен
+ari|ary = ER0 R IY0|EH2 R IY0 = арі
+aries|arries = EH2 R IY0 Z = аріес
+arr = AE1 R|AA1 R|EH0 R = ар
+arr = EH1 R = ӕр
+arr = ER0 = ар
+au = OH = о
+au\b = OW = оу
+au = OW = ө
+aur|awr = ER0 = аѵр
+au|aw = AO1|AO2|AH1|AA1|AO = аѵ
+au|aw = AW1|AW = ау
+ay = AY = ај
+ayer = EH1 R = ејер
+b = - = -
+b = B = б
+bb = B = б
+burgh = B ER0 OW0 = беро
+c = CH = ч
+cc = CH = ч
+c = K = к
+c = S = ц
+c = SH = ці
+call = K L = кл
+cc = K = к
+cc = K S = кц
+ch = CH = ч
+ch = JH = ж
+ch = K = к
+ch = SH = ш
+chew = CH UW1 = чеѵ
+ci = SH IY0 = ці
+cia = SH IH EY = ціӕ
+cia|tia = SH AH0|SH AX = ціа
+cie = CH AH0 = тіе
+cie|tie = SH AH0 = ціе
+cious|tious = SH AH0 S = ціос
+ck = K = к
+cqu = K W = ку
+ct = T = кт
+cts = K S = ктс
+d = - = -
+d = D = д
+d = JH = ді
+d = T = т
+dal = D L = дал
+dar = D R = др
+dd = D = д
+dew = D UW2|D UW1 = деѵ
+dg = JH = ж
+dia = JH AH0 = діа
+du = D UW2|D UW1 = дұ
+du = JH UW0|JH AH0|JH UH0 = дұ
+dua = JH AH0 W AH0 = дұа
+dua = JH AH0 W EY2 = дұӕ
+dur = D Y AX R|JH ER0 = дұр
+e = - = -
+e = EH1|AH0|IH0|EH2|AX|EH|IY0 = е
+e = EY0 = е
+e = EY1|EY2|EY = ӕ
+e = IH = е
+e = IH1 = і
+e = IY1|IY2|IY = є
+e\b = EY2 = еј
+ea = EH1|EH = е
+ea = EY1 = ӕ
+ea = IH1 = і
+ea = IY0 EY1 = еӕ
+ea = IY1 AH0 = єа
+ea = IY1 R|IA1|IY AX|IA = єа
+ea = IY1|IY = є
+ea = IY0 AH0|Y AH0|Y AX = еа
+ean = IY1 AH0 N = єан
+ear = AH0 = ер
+ear = EH1 R|EA = ӕр
+ear = ER1 = ер
+ear = IA R = єр
+ear = IY1 R|IH2 R|IA|IH1 R = єр
+eared = IY1 R D|IH2 R D|IA D|IH1 R D = єред
+ears = IY1 R Z|IH2 R Z|IA Z|IH1 R Z = єрес
+eau = Y UW = ұ
+eau = Y UW1 = ұ
+ee = IY1|IY|IH1 = є
+ee\b = IY1|IY|IH1 = іј
+eer = IY1 R|IH1 R|IA = єр
+ei = AY1 = и
+ei = EY1 = ӕ
+ei = IH1 = і
+ei = IY1 = є
+ei = IY1 IH0 = єі
+eigh = AY1 = ај
+eigh = EY1 = еј
+eign = AH0 N = ен
+eir = IY1 R|IA = єр
+el = AX L = ел
+em = AA1 M|OH M = ам
+en = AA0 N|OH N|AA2 N|AA1 N = ан
+en = N = ен
+eo = AH0 = е
+eo = AW1 = ау
+eo = EH1 = е
+eo = IA = ео
+eo = IH1 = єо
+eo = IH1 = і
+eo = IY0 OW0|IH OH|IY0 AH0 = ео
+eo = IY1 AH0 = єо
+eo = IY1|IY = є
+eous = IY0 AH0 S = еос
+er = AA1 R|AA1|AA = ар
+er = ER0 R = ер
+er = ER0|AH0|AX = ер
+er = ER1|ER2|ER = ер
+er = IA R = єр
+er = IH1 R = єр
+er = EH1 R = ӕр
+ere = IY1 R|IA1 = єр
+ered\b = ER1 D = ӕред
+era|erra = EH1 R AH0|EH2 R AH0|EH0 R AH0|EH1 R IH0|EH2 R IH0|EH0 R IH0 = ера
+ere = EH1 R AH0 = ере
+eri|ery|erri|erry = EH1 R AH0|EH2 R AH0|EH0 R AH0|EH1 R IH0|EH2 R IH0|EH0 R IH0 = ері
+err = ER1|ER2|ER = ерр
+erred = ER1 D = ерред
+ess\b|esse\b = EH1 S|EH2 S|AH0 S|AH0 S|AX S|EH S|IH0 S|EH0 S|IH S = есс
+esses\b = EH1 S IH0 Z|EH2 S IH0 Z|AH0 S IH0 Z|AH0 S IH0 Z|AX S IH Z|EH S IH Z|IH0 S IH0 Z|EH0 S IH0 Z = ессес
+essed\b = EH1 S T|EH2 S T|AH0 S T|AH0 S T|AX S T|EH S T|IH0 S T|EH0 S T = ессед
+essly\b = AH0 S L IY0|AX S L IY = есслі
+eur = Y UA R|ER R = ұр
+eu|ew = Y UW1|Y UW|Y UH2|Y UH1 = еѵ
+ewe = Y UW1 = еѵ
+ewer = OW1 R|OW1 AH0 = оуер
+ewer = Y UH R|Y UA1 = еѵер
+ey\b = EY1 = еј
+ey = EY1 = ӕ
+ey = IH1 = і
+ey = IY1 = є
+ey\b = IY1 = і{
+e’s = IH0 Z|IH Z = -с
+f = F = ф
+f = V = в
+ff = F = ф
+fort = F T = форт
+ful = F AH0 L|F AX L = фѵл
+fully = F AH0 L IY0 = фѵллі
+g = G = г
+g = JH = ж
+g = ZH = ж
+geous = JH AH0 S = жос
+gg = G = г
+gg = JH = ж
+gg = ZH = ж
+gh = - = -
+gh = F = ф
+gh = G HH = гх
+gio = JH AH0 = жіо
+gm = M = гм
+gn = N = гн
+gn = N Y = нј
+guer = G ER0 = гер
+h = - = -
+h = HH = х
+i = - = -
+i = AY1|AY = и
+i = IH1|IH2|IH|AH0|IY0|IY|Y IH1|AX = і
+i = IY1 = і
+i = Y = ј
+ia = AY1 = и
+ia = AY1 AH0|AY1 AE0 = иа
+ia = IA = іа
+ia = Y AH0 = іа
+iage = IH0 JH = іаж
+iar = AY1 ER|AY1 AH0 = иар
+iar = Y ER0 = іар
+ie = AH0 = е
+ie\b = AY1 = ај
+ies\b = AY1 Z|AY2 Z|AY Z = ајес
+ie = AY1 AH0 = ие
+ie = IH1 = і
+ie = IY0 AH0|Y AH0|IY0 EH1|IA = іе
+ie = IY1 = є
+ier = AY1 ER0|AY1 AH0 = иер
+ier = AY1 ER = иер
+ier = IY1 R|IA|IH1 R = єр
+ier = IY0 ER0 = іер
+ieu = UW0 = еѵ
+iew = Y UW2 = еѵ
+ig = AY1 = и
+igh = AY1|AY2|AY = и
+igh\b = AY1|AY2|AY = ај
+ighs\b = AY1 Z|AY2 Z|AY Z = ајес
+ighed\b = AY1 D|AY2 D|AY D = ајед
+igh = IH1 G HH = ігх
+igh’s = AY Z = ај-с
+ing = IH0 N = інг
+io = - = о
+io = AH0|IH0 = о
+io = AY1 AH0 = ио
+io = Y AH0|IA = іо
+ior = Y ER0|IY0 ER0 = іор
+iou = IY0 AH0 = іо
+ious = AH0 S|AX S = ос
+ir = ER1|ER0 = ір
+ir = AY1 ER0 = ир
+ir = AY1 ER0 R = ир
+ir = ER = ер
+ir = IA = єр
+ire = IY1 R|IA1 = єр
+irr = IH1 R|IH0 R = ір
+irred = ER1 D = еред
+irs = ER0 S = ірс
+iu = IY0 AH0|IA = іѵ
+j = JH = ж
+jj = JH = ж
+jew = JH UW = жеѵ
+jew = JH UW1 = жеѵ
+ju = JH UW0|JH UW2|JH UW1 = жұ
+k = K = к
+kk = K = к
+kn = N = н
+knew = N UW1 = кнеѵ
+l = - = -
+l = AH0 L|AX L = л
+l = L = л
+le = AH0 L = л
+leu|lew = L UW0 = леѵ
+leu|lew = L UW1 = леѵ
+ll = L = л
+llu = L UW0 = лұ
+llu = L UW2|L UW1 = лұ
+lu = L UW = лұ
+lu = L UW0|L UW2|L UW1 = лұ
+m = M = м
+mc = M AH0 K = мак
+mm = M = м
+mn = M = м
+mpb = M B = мпб
+n = N|NG|AH0 N = н
+neu|new = N UW0 = неѵ
+neu|new = N UW1 = неѵ
+ng = NG = нг
+ngth = NG K TH = нгþ
+nm = M = нм
+nn = N = н
+nu = N UW2|N UW1 = нұ
+n’t = NT = ’нт
+o = AH0|AA1|AA2|AA0|AX|OH|IH0 = о
+o = AH1|AH = ѵ
+o = AO1|AO2|AO0|AO = о
+o = IH = і
+o = OW = ө
+o = OW1|OW2|OW0 = ө
+o = UH = ѵ
+o = UW1|UW = у
+o\b = OW2 = о
+o’s\b = OW2 Z|OW Z = о-с
+oa = AO1|AO2|AO = аѵ
+oa = OW1|OW = оу
+oar = AO1 R|AH0 R|ER0|AO2 R = ор
+oar = AO = ор
+oe|œ = IY1 = і
+oe|œ = EH = і
+oe|œ = EH1 = і
+oid = OY D = оід
+oi|eoi = W AH0|W AA1|W AA2 = уа
+oi|oy = OY = ој
+old = OW1 L D = өлд
+on = N = он
+one = W AH0 N|W AH2 N|W AH1 N = уѵн
+oo = AH = ѵ
+oo = OW = оу
+oo = UH1|UH2|UH = у
+oo = UW1|UW = у
+oo = W AA1|W AA2 = оо
+oor|oore = AO1 R|AO2 R|AO = ор
+oor|oore = UW1 R|UA = ур
+or = AH = ор
+or = AO R = ор
+or = AO1 R|AO2 R|ER0|AH0|AO0 R|AO|AO R = ор
+or = ER0 R = ор
+or = ER|ER1 = ер
+or = R = ор
+ore = AO1 R|AO1 = ор
+orer = AO1 R ER0 = орер
+oreign = AO1 R AH0 N = орен
+orough = ER1 OW0 = ерроу
+orr = AA1 R|AO1 R|AO2 R = ор
+orr = ER = ерр
+orr = ER0 = ор
+orr = ER1 = ерр
+ou = AH0 = у
+ou = AH1 = ѵ
+ou = AW1|AW = ау
+ou = OW1 = оу
+ou = UH1|UH2|UH = ѵ
+ou = UW1|UW = у
+ough = AA1|AO1|AO = аѵ
+ough = AH1 F = ѵф
+ough = AO1 HH = ох
+ough = AW1 = ау
+ould = OW1 L D = өлд
+our = AO1 ER0|ER0|AH0|AO1 R|ER = ор
+our = AW1 ER0|AW1 AH0 R = аур
+our = ER1 = ӕр
+our = UA R = ур
+ous\b = AH0 S|IH0 S = ос
+ously\b = AH0 S L IY0|IH0 S L IY0 = ослі
+ow = AO1 = аѵ
+ow = AW1|AW2|AW = ау
+ow = OW1|OW0|OW = оу
+ower = AW1 ER0 = ауер
+owers = AW1 ER0 Z = ауерес
+ower = OW1 ER0 = оуер
+owers = OW1 ER0 Z = оуерес
+p = - = -
+p = P = п
+ph = F = ф
+ph = P HH = пх
+ph = V = в
+por = P R = пор
+pn = N = пн
+pp = P = п
+q = K = к
+qu = K = к
+qu = K W = ку
+qua = K W AA1|K W OH|K W AO = куо
+r = - = р
+r = ER0|AX R = р
+rr|r = R = р
+re = AX = р
+ree\b = R IY1 = ріј
+reu|rew = R UW2|R UW1|R UW = реѵ
+ru|rui = R UW0|R UW2|R UW1 = рұ
+s = - = -
+s = S = с
+s = SH = сі
+s\b = Z = с
+s = Z = з
+s = ZH = зі
+sc = S = сц
+scious = SH AH0 S|SH IH0 S = сціос
+sew = S UW1 = сеѵ
+sh = S HH = сх
+sh = SH = ш
+sm = Z AH0 M|Z AX M = зм
+some = S AH1 M|S AH0 M = сѵм
+ss = S = с
+ss = SH = ш
+ss = Z = з
+ssi = SH = сі
+ssu = SH UW0 = шѵ
+ssur|sur = SH ER0 = сұр
+ssur = SH UH1 R = шур
+su = S UW0 = су
+su = S UW|S UW1|S UW2|SH UW0 = сұ
+su = SH UH1 = шѵ
+su = Z UW|ZH AX = зұ
+su = Z UW1|Z UW2|ZH UW0 = зұ
+sua = ZH AH0 W AH0 = зұа
+sua = ZH UW2 AH0 = зұа
+sua = ZH W AH0 = зұа
+super = S UW1 P ER0|S UW2 P ER0|S UW0 P ER0 = сұпер
+sur = SH UH1 R = шур
+sur = ZH ER0 = зұр
+su|sui = S UW1|S UW2 = сұ
+t = - = -
+t = CH = ті
+t = SH = ці
+t = T = т
+t = ZH = ж
+tch = CH = ч
+teur = CH ER2|CH ER0 = тұр
+teur = T ER2 = тұр
+tew = T UW1 = теѵ
+th = DH = þ
+th = T HH = тх
+th = TH = þ
+thm = DH AH0 M = þм
+ti = SH IY0 = ці
+tia = CH AH0|CH IY0 AE1 = тіа
+tie = SH AH0 = ціе
+tio = CH AX = тіо
+tio = SH AX = ціо
+tious = SH AH0 S = ціос
+ts = T S = тс
+tt = T = т
+tu = CH AH0 W|CH W|CH UH = тұ
+tu|thu = CH UW0|CH AH0|CH AH0 W|CH UW2|CH UH0|T UW0|T UW2|T UW1 = тұ
+tur = CH ER0|CH UH2 R|CH UH1 R|CH R|CH AX R = тұр
+tz = T S = тц
+u = - = -
+u = AH = ѵ
+u = AH0|AX|IH0 = ѵ
+u = AH1|AH2 = ѵ
+u = EH1 = е
+u = IH1 = і
+u = UH1|UH2|UH = у
+u = UW1|UW = у
+u = W = у
+u = Y AH0 W = ұ
+u = Y UW0|Y AH0|Y UH = ұ
+u = Y UW1|Y UW2|Y UW = ұ
+ua = AH0 W AH0|UW2 AH0 = уа
+ua = Y AH0 = ұа
+ue = - = -
+ue = EH1 = е
+ui = IH1 = і
+uous = Y UA S = ұос
+ur = ER = ѵр
+ur = ER0|ER R = ѵр
+ur = ER1|AH0 = ѵр
+ur = Y UA R = ұр
+ur = EH2 R|EH1 R = ӕр
+urr = ER = ѵр
+urr = ER0 = ер
+urr = ER1|AH0 = ерр
+urred = ER1 D = ерред
+ur|urr = Y ER0 = ұр
+v = V = в
+vor = V R = вор
+vv = V = в
+w = - = -
+w = V = в
+w = W = у
+wa = W OH|W AA1|W AA2|W AO1|W AO = уо
+walk = W AO1 K = уаѵк
+ward = W ER0 D = уорд
+wards = W ER0 D Z = уордес
+wh = HH W = у
+wh = W = у
+what = W AH1 T|W AH2 T = уот
+wor = W ER1 = уер
+x = G Z = гз
+x = K S = кс
+x = Z = з
+xc = K S = ксц
+xio = K SH AH0 = ксіо
+xious = K SH AH0 S = ксіос
+xu = K SH UW0 = ксұ
+y = AY1|AY2|AY0|AY = и
+y\b = AY1|AY2|AY0|AY = ај
+y = IH1|IY0|IY|IH0|IH|AH0 = і
+y = Y = ј
+ya = IY AO = іа
+yr = ER0 = ір
+yr = ER1 = ір
+z = S|TH = с
+z = T S = тс
+z = Z = з
+zz = T S = тц
+zz = Z = з
+’d = AH0 D|IH0 D = -д
+’ll = AH0 L = -л
+’s = IH Z|EH1 S|IH0 Z = -с
+’s = S = -с
+’s = Z = -с
+’v = AH0 V = -в
+lessly = L AH0 S L IY0|L AX S L IY = леслі
+lessness = L AH0 S N AH0 S = леснесс
+ying = AY2 IH0 NG = ајінг
+
+as\b = AX Z|AH0 Z = аес
+bs\b|bes\b = B Z = бес
+cs\b|cks\b|ks\b|kes\b = K S = кес
+ds\b|des\b = D Z = дес
+ffs\b|fs\b|fes\b|phs\b = F S = фес
+gs\b|ggs\b|gues = G Z = гес
+ls\b|lls\b|les\b = L Z|AH0 L Z = лес
+ms\b|mes\b = M Z = мес
+ngs\b = NG Z = нгес
+ns\b|nes\b = N Z = нес
+ows\b = OW0 Z|OW1 Z|OW2 Z|OW Z = оуес
+ps\b|pes\b = P S = пес
+ths\b|thes\b = TH S|DH Z = þес
+ts\b|tes\b|ttes\b = T S = тес
+ves\b = V Z = вес
+
+airs\b|ares\b = EH1 R Z = ӕрес
+als\b = L Z|AH0 L Z = алес
+alls\b = AO2 L Z|AO1 L Z = олес
+ars\b = ER0 Z|AA1 R Z = арес
+ays\b = EY1 Z|EY2 Z|EY Z = ејес
+aws\b|awes\b = AO1 Z|AO Z = аѵес
+ees\b = IY1 Z = іјес
+ers\b = ER0 Z|AX Z = ерес
+eys\b|ies\b = IY0 Z|IH Z = іес
+ies\b = AY1 Z|AY0 Z = ајес
+ings\b = IH0 NG Z = інгес
+ires\b = AY1 ER0 Z|AY1 R Z = ирес
+oes\b = OW1 Z = оуес
+oes\b|os\b = OW0 Z|OW Z = өес
+olds\b = OW1 L D Z = өлдес
+os\b = OW0 Z = оес
+ors\b = ER0 Z|AX Z = орес
+oys\b = OY1 Z = ојес
+ears\b|eers\b = IY1 R Z|IH2 R Z|IA Z|IH1 R Z = єрес
+os\b = OW2 Z = оес
+ores\b = AO1 R Z = орес
+ures\b = Y ER0 Z = ұрес
+res\b = ER0 Z|AX Z = рес
+tures\b = CH AX Z|CH ER0 Z|CH UH2 R Z = тұрес
+ows\b = AW1 Z|AW2 Z = ауес
+ews\b|iews\b = Y UW2 Z|Y UW1 Z = еѵес
+
+ed\b = D = ед
+ed\b = T = ед
+
+ied\b = AY2 D|AY1 D = ајед
+ayed\b|eyed\b = EY1 D|EY D = ејед
+erred\b = ER1 D = еред
+led\b|lled\b = L D|AH0 L D = лед
+oed\b = OW2 D = оуед
+ored\b = AO1 R D = оред
+urred\b = ER1 D = ѵред
+ired = AY AX D = иред
+
+aying|eying = EY1 IH0 NG = ејінг
+ying|ighing = AY1 IH0 NG = ајінг
+
+aily = EY1 L IY0 = ејлі
