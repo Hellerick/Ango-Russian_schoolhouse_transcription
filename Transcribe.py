@@ -4,58 +4,11 @@ import platform
 import re
 import pickle
 
-"""
-== Run this script ==
-python3 /home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcribe.py
-python d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcribe.py
-
-== Rules ==
-/home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcription_rules.PEND.txt
-d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcription_rules.PEND.txt
-
-== User dictionary ==
-/home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/User_dict.PEND.txt
-d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/User_dict.PEND.txt
-
-== Phonetic dictionary ==
-/home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/cmudict.0.7a
-d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/cmudict.0.7a
-
-== Book under conversion ==
-/home/hellerick/Yandex-Disk/Languages/Alternate writing systems/English Latin Penderscirpt/Berkeley, Anthony/Berkeley - Poisoned Chocolates Case.fb2
-D:/HCF/YandexDisk/Languages/Alternate writing systems/English Latin Penderscirpt/Berkeley, Anthony/Berkeley - Poisoned Chocolates Case.fb2
-"""
-
-# rules:
-# https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F
-
-try:
-    dropbox_path = {
-        'hellerick-C17A': r'/home/hellerick/Dropbox',
-        'Superkomp': r'D:\HCF\Dropbox',
-        'Андрей-ПК': r'C:\HCF\Dropbox',
-        'hellerick-Aspire-F5-771G': '/home/hellerick/Dropbox',
-        'DESKTOP-BVT9381': 'd:\Dropbox',
-    }[platform.node()]
-except KeyError:
-    dropbox_path = ''
-
-
-yandexdisk_path = {
-    'hellerick-Aspire-F5-771G': '/home/hellerick/Yandex-Disk',
-    'Андрей-ПК':r'C:\Users\Андрей\YandexDisk',
-    'DESKTOP-NOE7NQE':r'C:\Users\inzhe\YandexDisk',
-    'DESKTOP-JP0T8V4': r'D:\HCF\YandexDisk',
-}[platform.node()]
 
 project_path = {
     'DESKTOP-62BVD4A': 'd:\KPV\Github\English_Cyrillic_script',
     'hellerick-C17A': '/home/hellerick/PycharmProjects/English_Cyrillic_script',
     'Superkomp': 'D:\HCF\PyCharmProjects\English_Cyrillic_script',
-    'Андрей-ПК': os.path.join(yandexdisk_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
-    'hellerick-Aspire-F5-771G': os.path.join(yandexdisk_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
-    'DESKTOP-BVT9381': os.path.join(dropbox_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
-    'DESKTOP-JP0T8V4': os.path.join(yandexdisk_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
 }[platform.node()]
 
 Hellerick_2015 = 'H15'
@@ -711,39 +664,6 @@ def main():
     )
 
     file_path = r'/home/hellerick/Dropbox/Lib/Fiction/Stewart, Mary/Stewart, Mary - The Little Broomstick.code.txt'
-    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Vonnegut, Kurt', 'Kurt Vonnegut Welcome to the Monkey House Stories.html')
-    file_path = os.path.join('Examples/About_capitalist_employers.txt')
-    file_path = os.path.join('Examples/The_Sorceress_of_Karres.fodt')
-    file_path = os.path.join("Examples/Pompeo.txt")
-    file_path = os.path.join('/home/hellerick/Documents/Akiba/Ranobe/Suzumiya Haruhi/English/The Intuition of Haruhi Suzumiya.fodt')
-    file_path = os.path.join(dropbox_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription', 'Examples', 'Gerald Durrell - The Talking Parcel.fodt')
-    file_path = os.path.join('/home/hellerick/Documents/Articles/The Atlantic Charter.fodt')
-    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Azimov, Isaac', 'Asimov, Isaac - Caves of Steel - 1953.fodt')
-    file_path = os.path.join(dropbox_path, 'Lib', 'Fiction', 'Hemingway, Ernest', 'Hemingway - Hills Like White Elephants.txt')
-    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Donaldson, Stephen', 'Donaldson, Stephen - Daughter of Regals.fodt')
-    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Azimov, Isaac', 'Asimov, Isaac - Caves of Steel - 1953.fodt')
-    file_path = os.path.join('/home/hellerick/Yandex-Disk/Languages/Alternate writing systems/English reformed Latin script/Brown, Joe David/Paper Moon.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Tsujimura, Mizuki', 'Mizuki Tsujimura - Lonely Castle in the Mirror.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Huxley, Aldous', 'Aldous Huxley - Brave New World (1932).fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Ibbotson, Eva', 'Ibbotson, Eva - Journey to the River Sea.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Herbert, Frank', 'Dune.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Lo, Melinda', 'Malinda Lo - Ash.code.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Bliss, Harper', 'Harper Bliss - A Family Affair.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Waters, Sarah', 'Sarah Waters - Fingersmith.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Bliss, Harper', 'Harper Bliss - Seasons of Love.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Lee, Harper', 'Harper Lee - To Kill a Mockingbird.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Bryant, Kris', 'Kris Bryant - Temptation.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Vonnegut, Kurt', 'Kurt Vonnegut - Cats Cradle.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Burgess, Anthony', 'Anthony Burgess - A Clockwork Orange.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Birdsall, Jeanne', 'Jeanne Birdsall - The Penderwicks 1.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Reed, Zoe', 'Zoe Reed - Breaking Legacies.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Bradley, Alan', 'Bradley - The Sweetness at the Bottom of the Pie.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic CIRA', 'Jones, Diana Wynne', 'Jones - Howls Moving Castle.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin LIRA', 'Neil Gaiman and Terry Pratchett', 'Good omens.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic CIRA', 'Simmons, Dan', 'Simmons - Hyperion.fodt')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Hayes, Emily', 'Hayes - LLS.fb2')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic CIRA', 'Heinlein, Robert A', 'Heinlein - The Door into Summer.fb2')
-    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Berkeley, Anthony', 'Berkeley - Poisoned Chocolates Case.fb2')
 
     print(file_path)
     # convert_file(file_path, posttrans='CISALAT')
