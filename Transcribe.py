@@ -4,34 +4,76 @@ import platform
 import re
 import pickle
 
+"""
+== Run this script ==
+python3 /home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcribe.py
+python d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcribe.py
+
+== Rules ==
+/home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcription_rules.PEND.txt
+d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Transcription_rules.PEND.txt
+
+== User dictionary ==
+/home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/User_dict.PEND.txt
+d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/User_dict.PEND.txt
+
+== Phonetic dictionary ==
+/home/hellerick/Yandex-Disk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/cmudict.0.7a
+d:/HCF/YandexDisk/Programming/Python/Translit/Ango-Russian_schoolhouse_transcription/Dictionaries/cmudict.0.7a
+
+== Book under conversion ==
+/home/hellerick/Yandex-Disk/Languages/Alternate writing systems/English Latin Penderscirpt/Berkeley, Anthony/Berkeley - Poisoned Chocolates Case.fb2
+D:/HCF/YandexDisk/Languages/Alternate writing systems/English Latin Penderscirpt/Berkeley, Anthony/Berkeley - Poisoned Chocolates Case.fb2
+"""
+
 # rules:
 # https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F
+
+try:
+    dropbox_path = {
+        'hellerick-C17A': r'/home/hellerick/Dropbox',
+        'Superkomp': r'D:\HCF\Dropbox',
+        'Андрей-ПК': r'C:\HCF\Dropbox',
+        'hellerick-Aspire-F5-771G': '/home/hellerick/Dropbox',
+        'DESKTOP-BVT9381': 'd:\Dropbox',
+    }[platform.node()]
+except KeyError:
+    dropbox_path = ''
+
+
+yandexdisk_path = {
+    'hellerick-Aspire-F5-771G': '/home/hellerick/Yandex-Disk',
+    'Андрей-ПК':r'C:\Users\Андрей\YandexDisk',
+    'DESKTOP-NOE7NQE':r'C:\Users\inzhe\YandexDisk',
+    'DESKTOP-JP0T8V4': r'D:\HCF\YandexDisk',
+}[platform.node()]
 
 project_path = {
     'DESKTOP-62BVD4A': 'd:\KPV\Github\English_Cyrillic_script',
     'hellerick-C17A': '/home/hellerick/PycharmProjects/English_Cyrillic_script',
     'Superkomp': 'D:\HCF\PyCharmProjects\English_Cyrillic_script',
-    'Андрей-ПК': 'D:\HCF\Github\Ango-Russian_schoolhouse_transcription',
-    'hellerick-Aspire-F5-771G': '/home/hellerick/PycharmProjects/Ango-Russian_schoolhouse_transcription',
-}[platform.node()]
-
-dropbox_path = {
-    'hellerick-C17A': r'/home/hellerick/Dropbox',
-    'Superkomp': r'D:\HCF\Dropbox',
-    'Андрей-ПК': r'D:\HCF\Dropbox',
-    'hellerick-Aspire-F5-771G': '/home/hellerick/Dropbox',
+    'Андрей-ПК': os.path.join(yandexdisk_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
+    'hellerick-Aspire-F5-771G': os.path.join(yandexdisk_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
+    'DESKTOP-BVT9381': os.path.join(dropbox_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
+    'DESKTOP-JP0T8V4': os.path.join(yandexdisk_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription'),
 }[platform.node()]
 
 Hellerick_2015 = 'H15'
 Schoolhouse = 'SCH'
-Socialist_English_alphabet = 'SEA'
-Socialist_English_Latin_alphabet = 'SELA'
+Cyrillic_English_Socialist_Alphabet = 'CISA'
+Latin_English_Socialist_Alphabet = 'LISA'
+Gothic_English_Alphabet = 'GOTH'
+Thornica = "THOR"
+Penderscript = "PEND"
+Latin_English_Reformed_Alphabet = "LIRA"
+Cyrillic_English_Reformed_Alphabet = 'CIRA'
 
-system = 'SELA'
 
-English_alphabet = 'abcdefghijklmnopqrstuvwxyzáâéëêíïúſ'
+system = 'CIRA'
 
-hyphenate = True
+English_alphabet = 'abcdefghijklmnopqrstuvwxyzáàâāäçéëêèíïñōöôúūſæœ'
+
+hyphenate = False
 
 
 def translit_cyr(word):
@@ -45,7 +87,7 @@ def translit_cyr(word):
             ['j', 'џ'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
             ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
             ['u', 'у'], ['v', 'в'], ['w', 'ѵ'], ['x', 'кс'], ['y', 'і'], ['z', 'з'],
-            ['á', 'а́']
+            ['á', 'а́'], ['ā', 'а́'],  ['ō', 'о́'], ['ū', 'у́'], 
         ]
     elif system == 'SCH':
         translit_pairs = [
@@ -60,7 +102,7 @@ def translit_cyr(word):
             ['u', 'у'], ['v', 'в'], ['w', 'ў'], ['x', 'кс'], ['y', 'и'], ['z', 'з'],
             ['á', 'а́']
         ]
-    elif system == 'SEA':
+    elif system == 'CISA':
         translit_pairs = [
             ['ce', 'се'], ['ci', 'си'], ['cy', 'си'], ['ya', 'ја'], ['ye', 'је'],
             ['yi', 'ји'], ['yo', 'јо'], ['yu', 'ју'], ['ch', 'ч'],
@@ -71,20 +113,94 @@ def translit_cyr(word):
             ['j', 'ж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
             ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
             ['u', 'у'], ['v', 'в'], ['w', 'ү'], ['x', 'кс'], ['y', 'и'], ['z', 'з'],
-            ['á', 'а́']
+            ['á', 'а́'], ['ū', 'у́']
         ]
-    elif system == 'SELA':
+    elif system == 'CIRA':
+        translit_pairs = [
+            ['tch', 'ч'], 
+            ['ce', 'це'], ['ci', 'ці'], ['cy', 'сі'], ['ya', 'ја'], ['ye', 'је'],
+            ['yi', 'јі'], ['yo', 'јо'], ['yu', 'ју'], ['ch', 'ч'],
+            ['sh', 'ш'], ['th', 'þ'], ['wh', 'у'],
+            ['yá', 'ја́'],
+            ['a', 'а'], ['b', 'б'], ['c', 'к'],
+            ['d', 'д'], ['e', 'е'], ['f', 'ф'], ['g', 'г'], ['h', 'х'], ['i', 'і'],
+            ['j', 'ж'], ['k', 'к'], ['l', 'л'], ['m', 'м'], ['n', 'н'],
+            ['o', 'о'], ['p', 'п'], ['q', 'к'], ['r', 'р'], ['s', 'с'], ['t', 'т'],
+            ['u', 'у'], ['v', 'в'], ['w', 'у'], ['x', 'кс'], ['y', 'і'], ['z', 'з'],
+            ['á', 'а́'], ['ū', 'у́'], ['ñ', 'нj'],
+        ]
+    elif system == 'LISA':
         translit_pairs = [
             ['ce', 'ce'], ['ci', 'ci'], ['cy', 'ci'], ['ya', 'ya'], ['ye', 'ye'],
             ['yi', 'yi'], ['yo', 'yo'], ['yu', 'yu'], ['ch', 'ch'],
-            ['sh', 'sh'], ['th', 'th'], ['wh', 'hw'],
+            ['sh', 'sh'], ['th', 'th'], ['wh', 'w'],
             ['yá', 'yа́'],
             ['a', 'a'], ['b', 'b'], ['c', 'k'],
             ['d', 'd'], ['e', 'e'], ['f', 'f'], ['g', 'g'], ['h', 'h'], ['i', 'i'],
             ['j', 'j'], ['k', 'k'], ['l', 'l'], ['m', 'm'], ['n', 'n'],
             ['o', 'o'], ['p', 'p'], ['q', 'k'], ['r', 'r'], ['s', 's'], ['t', 't'],
-            ['u', 'u'], ['v', 'v'], ['w', 'w'], ['x', 'ks'], ['y', 'i'], ['z', 'z'],
+            ['u', 'u'], ['v', 'v'], ['w', 'w'], ['x', 'x'], ['y', 'i'], ['z', 'z'],
             ['á', 'á']
+        ]
+    elif system == 'LIRA' or system == 'LIRA2':
+        translit_pairs = [
+            ['ce', 'ce'], ['ci', 'ci'], ['cy', 'ci'], ['ya', 'ya'], ['ye', 'ye'],
+            ['yi', 'yi'], ['yo', 'yo'], ['yu', 'yu'], ['ch', 'ch'],
+            ['sh', 'sh'], ['th', 'th'], ['wh', 'w'],
+            ['yá', 'yа́'],
+            ['a', 'a'], ['b', 'b'], ['c', 'k'],
+            ['d', 'd'], ['e', 'e'], ['f', 'f'], ['g', 'g'], ['h', 'h'], ['i', 'i'],
+            ['j', 'j'], ['k', 'k'], ['l', 'l'], ['m', 'm'], ['n', 'n'],
+            ['o', 'o'], ['p', 'p'], ['q', 'k'], ['r', 'r'], ['s', 's'], ['t', 't'],
+            ['u', 'u'], ['v', 'v'], ['w', 'w'], ['x', 'x'], ['y', 'i'], ['z', 'z'],
+            ['á', 'á'],
+        ]
+    elif system == 'GOTH':
+        translit_pairs = [ # 𐌰 𐌰̈ 𐌱 𐌲 𐌲̈ 𐌳 𐌴 𐌴̈ 𐌶 𐌷 𐌸 𐌹 𐌹̈ 𐌺 𐌺̈ 𐌻 𐌼 𐌽 𐌾 𐌿 𐌿̈ 𐍀 𐍁 𐍂 𐍃 𐍃̈ 𐍄 𐍅 𐍅̈ 𐍆 𐍇 𐍈 𐍉 𐍉̈
+            ['ce', '𐍇𐌴'], ['ci', '𐍇𐌹'], ['cy', '𐍇𐌹'], ['ya', '𐌾𐌰'], ['ye', '𐌾𐌴'],
+            ['yi', '𐌾𐌹'], ['yo', '𐌾𐍉'], ['yu', '𐌾𐌿'], ['ch', '𐌺̈'],
+            ['sh', '𐍃̈'], ['th', '𐌸'], ['wh', '𐍈'],
+            ['yá', '𐌾𐌰'],
+            ['a', '𐌰'], ['b', '𐌱'], ['c', '𐌺'],
+            ['d', '𐌳'], ['e', '𐌴'], ['f', '𐍆'], ['g', '𐌲'], ['h', '𐌷'], ['i', '𐌹'],
+            ['j', '𐌲̈'], ['k', '𐌺'], ['l', '𐌻'], ['m', '𐌼'], ['n', '𐌽'],
+            ['o', '𐍉'], ['p', '𐍀'], ['q', '𐌺'], ['r', '𐍂'], ['s', '𐍃'], ['t', '𐍄'],
+            ['u', '𐌿'], ['v', '𐍅̈'], ['w', '𐍅'], ['x', '𐌺𐍃'], ['y', '𐌹'], ['z', '𐌶'],
+            ['á', '𐌰']
+        ]
+    elif system == 'ANG':
+        translit_pairs = [ # ç ó þ
+            ['ce', 'çe'], ['ci', 'çi'], ['cy', 'çi'], ['ya', 'gea'], ['ye', 'ge'],
+            ['yi', 'gi'], ['yo', 'geo'], ['yu', 'geu'], ['ch', 'c'],
+            ['sh', 'sc'], ['th', 'þ'], ['wh', 'hw'],
+            ['yá', 'geа́'],
+            ['ke', 'ché'], ['ki', 'chí'],
+            ['a', 'a'], ['b', 'b'], ['c', 'c'],
+            ['d', 'd'], ['e', 'e'], ['f', 'f'], ['g', 'g'], ['h', 'h'], ['i', 'i'],
+            ['j', 'j'], ['k', 'k'], ['l', 'l'], ['m', 'm'], ['n', 'n'],
+            ['o', 'o'], ['p', 'p'], ['q', 'q'], ['r', 'r'], ['s', 's'], ['t', 't'],
+            ['u', 'u'], ['v', 'v'], ['w', 'w'], ['x', 'x'], ['y', 'i'], ['z', 'z'],
+            ['á', 'á']
+        ]
+    elif system == 'THOR':
+        translit_pairs = [ # þ ú
+            ['th', 'þ'],
+            ['a', 'a'], ['b', 'b'], ['c', 'c'],
+            ['d', 'd'], ['e', 'e'], ['f', 'f'], ['g', 'g'], ['h', 'h'], ['i', 'i'],
+            ['j', 'j'], ['k', 'k'], ['l', 'l'], ['m', 'm'], ['n', 'n'],
+            ['o', 'o'], ['p', 'p'], ['q', 'q'], ['r', 'r'], ['s', 's'], ['t', 't'],
+            ['u', 'u'], ['v', 'v'], ['w', 'w'], ['x', 'x'], ['y', 'i'], ['z', 'z'],
+            ['á', 'á'], ['é', 'é']
+        ]
+    elif system == 'PEND':
+        translit_pairs = [ # þ ú
+            ['th', 'th'],
+            ['a', 'a'], ['b', 'b'], ['c', 'c'],
+            ['d', 'd'], ['e', 'e'], ['f', 'f'], ['g', 'g'], ['h', 'h'], ['i', 'i'],
+            ['j', 'j'], ['k', 'k'], ['l', 'l'], ['m', 'm'], ['n', 'n'],
+            ['o', 'o'], ['p', 'p'], ['q', 'q'], ['r', 'r'], ['s', 's'], ['t', 't'],
+            ['u', 'u'], ['v', 'v'], ['w', 'w'], ['x', 'x'], ['y', 'i'], ['z', 'z'],
+            ['á', 'á'], ['é', 'é']
         ]
     for pair in translit_pairs:
         word = word.replace(*pair)
@@ -114,17 +230,20 @@ def try_lat_phonet_matching(prev_cyr, next_lat, next_phonet, rules):
                     next_phonet[phonet_len:],
                     rules
                 )
-                if attempt: return attempt
+                if attempt:
+                    #print(rule)
+                    return attempt
 
 
 def phonet_cyr(lat, phonet, rules=[]):
     global watch
     watch = f'{lat} [{phonet}]'
-    cyr = try_lat_phonet_matching(prev_cyr='', next_lat=lat, next_phonet=phonet.split(), rules=rules)
+    cyr = try_lat_phonet_matching(prev_cyr='', next_lat='<'+lat+'>', next_phonet=phonet.split(), rules=rules) # the characters '<' and '>' would stand fro start/end of the word
     if cyr == None:
         print(watch)
-        raise Exception('Not matched!')
-    # print('phonet_cyr', cyr)
+        print('==Exception: Not matched!==')
+        #raise Exception('Not matched!')
+##    print('phonet_cyr', lat, '=', cyr)
     return cyr
 
 
@@ -136,11 +255,18 @@ def convert_word(word, cyr_dict):
             case = 'title'
         else:
             case = 'allcaps'
+    elif word[0] == '’' and word[1].isupper():
+        if len(word) < 3 or word[2].islower():
+            case = 'apo-title'
+        else:
+            case = 'allcaps'
     else:
         case = 'lower'
     word = cyr_dict[word.lower()]
     if case == 'title':
         word = word[0].upper() + word[1:]
+    elif case == 'apo-title':
+        word = word[0] + word[1].upper() + word[2:]
     elif case == 'allcaps':
         word = word.upper()
     # print('convert_word', word)
@@ -148,7 +274,9 @@ def convert_word(word, cyr_dict):
 
 
 def convert_text(text, cyr_dict):
-    text = re.sub(r'([' + English_alphabet + r',]\s)I\b', r'\1i', text)
+    if not system=='PEND':
+        text = re.sub(r'([' + English_alphabet + r',]\s)I\b', r'\1i', text)
+##    text = re.sub(r'([A-Z])([A-Z][a-z])', r'\1`=`\2', text)
     text = re.split(
         '([' + English_alphabet + English_alphabet.upper() + '’]*[' + English_alphabet + English_alphabet.upper() + '][0-9]?)',
         text)
@@ -156,7 +284,9 @@ def convert_text(text, cyr_dict):
     for n, word in enumerate(text):
         if n % 2 == 1:
             text[n] = convert_word(word, cyr_dict)
-    return ''.join(text)
+    text = ''.join(text)
+##    text = re.sub('`=`', r'', text)
+    return text
 
 
 def try_breaking(word, cyr_dict, phonet_dict, rules):
@@ -166,7 +296,10 @@ def try_breaking(word, cyr_dict, phonet_dict, rules):
             print(f'Word broken: {word[:b]} + {word[b:]}')
             returned = [cyr_dict[w] if w in cyr_dict else phonet_cyr(w, phonet_dict[w], rules) for w in
                         [word[:b], word[b:]]]
-            return '¬'.join(returned)
+            try:
+                return '¬'.join(returned)
+            except Exception:
+                return 'None'
 
 
 def postprocess(cyr_dict, user_dict, full_normalization=False):
@@ -233,6 +366,7 @@ def make_local_dictionary(file_path, word_list):
     rules = [re.sub(r'(.*)#.*', r'\1', line) for line in rules]
     rules = [line for line in rules if line != '']
     rules = [re.split(r' ?= ?', line) for line in rules]
+    rules = rules + [['<','-','-'], ['>','-','-']] # Adding ability to ignore the word-initial/final characters '<' and '>'.
     for r in rules:
         if r[1] == '-': r[1] = ''
     for r in rules:
@@ -291,9 +425,15 @@ def make_local_dictionary(file_path, word_list):
             phonet_dict[word] = UK_dict[word]
 
     cyr_dict = {word: user_dict[word] for word in user_dict}
+    cyr_list = ''
     for word in word_list:
         if not word in user_dict and word in phonet_dict:
             cyr_dict[word] = phonet_cyr(word, phonet_dict[word], rules)
+            print(word, '=', cyr_dict[word])
+            try:
+                cyr_list = cyr_list + word + ' = ' + cyr_dict[word] + ' # ' + phonet_dict[word] + '\n'
+            except Exception:
+                pass
     for word in word_list:
         if not word in cyr_dict:
             attempt = try_breaking(word, cyr_dict, phonet_dict, rules)
@@ -305,18 +445,24 @@ def make_local_dictionary(file_path, word_list):
                 missing_words = missing_words + [word]
     if system == 'SCH':
         cyr_dict = postprocess(cyr_dict, user_dict, full_normalization=False)
-    cyr_dict = eval(hyphenate_code(repr(cyr_dict)))
-    # print('make_local_dictionary', cyr_dict)
 
-    cyr_list = sorted([word + ' = ' + cyr_dict[word] for word in cyr_dict])
-    cyr_list = '\n'.join(cyr_list)
     with open(local_dict_path, mode='wt', encoding='utf8') as f:
         f.write(cyr_list)
+
+    if system in ['H15', 'SCH', 'CISA', 'CIRA']:
+        cyr_dict = eval(hyphenate_code(repr(cyr_dict)))
+    elif system in ['LISA', 'ANG', 'LIRA', 'LIRA2', 'PEND']:
+        in_dict = [word for word in cyr_dict]
+        out_dict = [cyr_dict[word] for word in cyr_dict]
+        out_dict = eval(hyphenate_code(repr(out_dict)))
+        cyr_dict = zip(in_dict, out_dict)
+        cyr_dict = {pair[0]:pair[1] for pair in cyr_dict}
+##        print('make_local_dictionary', cyr_dict)
 
     if not 'default.txt' in file_path:
         pickle.dump(cyr_dict, open(local_dict_pickle_path, mode='wb'))
 
-    with open('missing_dict_path', mode='wt', encoding='utf8') as f:
+    with open(missing_dict_path, mode='wt', encoding='utf8') as f:
         f.write('\n'.join(sorted(missing_words)))
 
     return cyr_dict
@@ -324,11 +470,15 @@ def make_local_dictionary(file_path, word_list):
 
 def hyphenate_code(code):
     # ¬
-    if hyphenate:
-        vow = 'аеёиіоуъыэюяѵѡ'
+    if hyphenate and system in ('H15', 'SCH', 'CISA', 'CIRA'):
+        vow = 'аӕеёәєиіоөѵуұъыэюяѵѡ'
         dia = '́̀̈'
-        con = 'бвв̆гджзҙѕйіклмнпрсҫтўфхцчшщѵѳџ'
-        trucon = re.sub('[іѵ]', '', con)
+        con = 'бвв̆гджзҙӡѕйјклмнпрсҫтꚋþўфхцчшщѵүѳџ'
+        if system == "H15":
+            con = con + 'і'
+        if system == "CIRA":
+            con = con + 'у'
+        trucon = re.sub('[іѵүу]', '', con)
         let = vow + dia + con + 'ь'
         vow, dia, con, let, trucon = [f'[{x}]' for x in [vow, dia, con, let, trucon]]
         code = re.sub(r'(' + let + '+)', r'<<\1>>', code)
@@ -338,20 +488,137 @@ def hyphenate_code(code):
         code = re.sub(r'(' + vow + ')¬й', r'\1й¬', code)
         code = re.sub(r'(' + vow + ')¬й', r'\1й¬', code)
         code = re.sub(r'(а|о)¬у', r'\1у', code)
-        for c in ['дж', 'жў', 'іу']:
+        for c in ['дж', 'жў'] or (c in ['іу'] and system == 'H15'):
             code = re.sub(c[0] + '¬' + c[1], '¬' + c, code)
-        for c in ['еі', 'аі', 'аѵ', 'оі', 'оѵ', 'ѵе', 'ѵі', 'ѵо', 'іа', 'іѵ']:
+        for c in ['еі', 'еѵ', 'аі', 'аѵ', 'оі', 'оѵ', 'ѵе', 'ѵі', 'ѵо', 'іа', 'іѵ']:
             code = re.sub(c[0] + '¬' + c[1], c, code)
+        if system == 'CISA':
+            code = re.sub(r'([аео])¬и', r'\1и', code)
         code = re.sub(r'¬([лмнр])(' + trucon + ')', r'\1¬\2', code)
         code = re.sub(r'¬([лмнр])(' + trucon + ')', r'\1¬\2', code)
         code = re.sub(r'¬(' + con + r')\1', r'\1¬\1', code)
         code = re.sub(r'¬([лмнр])(' + trucon + ')', r'\1¬\2', code)
         code = re.sub(r'([бгдкптф])¬([лр])', r'¬\1\2', code)
+        code = re.sub(r'¬([дт])л', r'\1¬л', code)
+        code = re.sub(r'нс¬ц', r'н¬сц', code)
+        code = re.sub(r'н¬гл', r'нг¬л', code)
+        code = re.sub(r'([бгдкмпрт])¬?с¬([птк])', r'\1¬с\2', code)
         code = re.sub(r'¬(' + con + ')ли>>', r'\1¬ли', code)
+        code = re.sub(r'([аеиоуӕєіөұ])¬([бвгджзјклмнпрстþфхцчш])¬?([бвгджзјклмнпрстþфхцчш])', r'\1\2¬\3', code)
+        if system == 'CIRA':
+            code = re.sub(r'¬(' + con + '+ес>>)', r'\1', code)
+            code = re.sub(r'('+vow + r')¬ес>>', r'\1ес', code)
+            code = re.sub(r'('+vow + r')¬ед>>', r'\1ед', code)
+            code = re.sub(r'¬([бвгѕзјклмнпрсþуфцчш]ед>>)', r'\1', code)
+            code = re.sub(r'<<ѵн([с])¬', r'<<ѵн¬\1', code)
+            code = re.sub(r'у¬([аӕеєіиоөуұѵ])', r'¬у\1', code)
+            code = re.sub(r'<<ек¬с([бвгджзјклмнпрстþфхцчш])', r'екс¬\1', code)
+            code = re.sub(r'¬?([бвгджзјклмнпрстþфхцчш])¬у¬?([аӕеєіиоөуұѵ])', r'\1¬у\2', code)
+            code = re.sub(r'([зстц])і¬([аео])', r'\1і\2', code)
+            code = re.sub(r'о¬у(інг|ер|ес)>>', r'оу¬\1>>', code)
+            code = re.sub(r'([ао])¬уе', r'\1у¬е', code)
+            code = re.sub(r'([аео])¬јі', r'\1ј¬і', code)
+        code = re.sub(r'<<¬?(де|ре)([бдкптк])¬([лр])', r'<<\1¬\2\3', code)
+        code = re.sub(r'<<(.)>>¬<<¬*', r'<<\1', code)
         code = re.sub(r'¬(' + con + '+¬>>)', r'\1', code)
         code = re.sub(r'¬>>', r'>>', code)
         code = re.sub(r'<<¬+', r'<<', code)
-        # print('HYPHEN', code[-50:])
+        code = re.sub(r'¬(' + vow + dia + '?)>>', r'\1>>', code)
+        code = re.sub(r'<<(' + trucon + '+' + dia + '?|' + vow + dia + '?)¬', r'<<\1', code)
+        code = re.sub(r'<<(' + trucon + '+' + dia + '?|' + vow + dia + '?)¬', r'<<\1', code)
+        code = re.sub(r'(<<|>>)', r'', code)
+        code = re.sub(r'¬¬', r'¬', code)
+        code = re.sub(r'¬', r'­', code)
+    elif hyphenate and system in ('LISA', 'ANG', 'LIRA', 'LIRA2', 'PEND'):
+        vow = 'aeiouyəäëïöüáéíôóûú'
+        dia = '́̀̈'
+        con = 'bcdfghjklmnpqrstvwxyz'
+        trucon = re.sub('[y]', '', con)
+        let = vow + dia + con
+        vow, dia, con, let, trucon = [f'[{x}]' for x in [vow, dia, con, let, trucon]]
+        code = re.sub(r'(' + let + '+)', r'<<\1>>', code)
+        code = re.sub(r'(' + con + vow + ')', r'¬\1', code)
+        code = re.sub(r'(' + vow + '|' + dia + ')(' + vow + ')', r'\1¬\2', code)
+        code = re.sub(r'(' + vow + '|' + dia + ')(' + vow + ')', r'\1¬\2', code)
+        code = re.sub(r'(a|e|o)¬(i|u)', r'\1\2', code)
+        for c in ['ch', 'sh', 'th', 'wh']:
+            code = re.sub(c[0] + '¬' + c[1], '¬' + c, code)
+        for c in ['ei', 'ai', 'ay', 'au', 'aú', 'ey', 'oi', 'oo', 'ou', 'uu', 'ya', 'yä', 'ye', 'yë', 'yi', 'yï', 'yo', 'yö', 'yu', 'yü', 'yə', 'əi', 'əu']:
+            code = re.sub(c[0] + '¬' + c[1], c, code)
+        code = re.sub(r'¬([lmnr])(' + trucon + ')', r'\1¬\2', code)
+        code = re.sub(r'¬(' + con + r')\1', r'\1¬\1', code)
+        code = re.sub(r'¬([lmnr])(' + trucon + ')', r'\1¬\2', code)
+        code = re.sub(r'([bdfgkpt])¬([r])', r'¬\1\2', code)
+        code = re.sub(r'([bdfgkpt])¬([l])', r'¬\1\2', code)
+        code = re.sub(r'¬([dt])([l])', r'\1¬\2', code)
+        code = re.sub(r'(ci|di|qu|si|ti|zi)¬('+vow+')', r'\1\2', code)
+        code = re.sub(r'([bdfgjklmnprtvz])¬?s¬([ptk])', r'\1¬s\2', code)
+        code = re.sub(r'n¬g([l])', r'ng¬\1', code)
+        if system == 'LIRA':
+            code = re.sub(r'<<au¬t([lr])', r'aut¬\1', code)
+            code = re.sub(r'<<uns¬([ptk])', r'un¬s\1', code)
+            code = re.sub(r'¬(' + con + '+ed)>>', r'\1', code)
+            code = re.sub(r'¬(' + con + '+es)>>', r'\1', code)
+            code = re.sub(r'i¬ed>>', r'ied>>', code)
+            code = re.sub(r'i¬es>>', r'ies>>', code)
+        if system == 'PEND':
+            code = re.sub(r'¬(' + con + '+ed)>>', r'\1', code)
+            code = re.sub(r'¬(' + con + '+es)>>', r'\1', code)
+            code = re.sub(r'¬(' + con + '+e)>>', r'\1', code)
+            code = re.sub(r'([ao])¬w(e)', r'\1w¬\2', code)
+            code = re.sub(r'([ao])¬y(i)', r'\1y¬\2', code)
+            code = re.sub(r'<<uns¬?([ptck])¬?', r'un¬s\1', code)
+            code = re.sub(r'(e)¬(a¬?r)', r'\1\2', code)
+            code = re.sub(r'(n)([ptc])¬([lr])', r'\1¬\2\3', code)
+            for c in ['oa']:
+                code = re.sub(c[0] + '¬' + c[1], c, code)
+            code = re.sub(r'<<¬?(de|re|pre)([ptc])¬?([lr])', r'\1¬\2\3', code)
+            code = re.sub(r'<<¬?(de|re|pre)([s])¬?([ptc])', r'\1¬\2\3', code)
+            code = re.sub(r'<<¬?('+con+'+)e¬a('+con+'+)(|s|es|ing|ed)>>', r'\1ea\2\3', code)
+            for c in ['ee', 'au', 'aw', 'oo', 'eu', 'ew', 'oi', 'oy']:
+                code = re.sub(c[0] + '¬' + c[1], c, code)
+            code = re.sub(r'oing>>', r'o¬ing>>', code)
+        if system in ('LIRA', 'PEND'):
+            code = re.sub(r'¬(' + con + ')less>>', r'\1¬less>>', code)
+            code = re.sub(r'¬(' + con + ')ness>>', r'\1¬ness>>', code)
+        code = re.sub(r'¬(' + con + ')li>>', r'\1¬li', code)
+        code = re.sub(r'¬(' + con + '+¬>>)', r'\1', code)
+        code = re.sub(r'¬?<<(.)>>¬?', r'\1', code)
+        #print('Watch:', code[-30:])
+        code = re.sub(r'¬>>', r'>>', code)
+        code = re.sub(r'¬ed>>', r'ed>>', code)
+        code = re.sub(r'¬es>>', r'es>>', code)
+        code = re.sub(r'<<¬+', r'<<', code)
+        code = re.sub(r'¬(' + vow + dia + '?)>>', r'\1>>', code)
+        code = re.sub(r'<<(' + trucon + '+' + dia + '?|' + vow + dia + '?)¬', r'<<\1', code)
+        code = re.sub(r'(<<|>>)', r'', code)
+        code = re.sub(r'¬', r'­', code)
+    elif hyphenate and system == 'GOTH':
+        vow = '𐌰𐌴𐌹𐌿𐍁𐍉'
+        dia = '̈̔'
+        con = '𐌱𐌲𐌳𐌶𐌷𐌸𐌺𐌻𐌼𐌽𐌾𐍀𐍂𐍃𐍄𐍆𐍇𐍈'
+        trucon = con
+        let = vow + dia + con
+        vow, dia, con, let, trucon = [f'[{x}]' for x in [vow, dia, con, let, trucon]]
+        code = re.sub(r'(' + let + '+)', r'<<\1>>', code)
+        code = re.sub(r'(' + con + vow + ')', r'¬\1', code)
+        code = re.sub(r'(' + vow + '|' + dia + ')(' + vow + ')', r'\1¬\2', code)
+        code = re.sub(r'(𐌰|𐌴|𐍉)¬(𐌹|𐌿)', r'\1\2', code)
+        #for c in ['ch', 'sh', 'th']:
+        #    code = re.sub(c[0] + '¬' + c[1], '¬' + c, code)
+        for c in ['𐌴𐌹', '𐌰𐌹', '𐌰𐌿', '𐌴𐌾', '𐍉𐌹', '𐍉𐌿', '𐌿𐌿', '𐍁𐌹', '𐍁𐌿']:
+            code = re.sub(c[0] + '¬' + c[1], c, code)
+        code = re.sub(r'¬([𐌻𐌼𐌽𐍂])(' + trucon + ')', r'\1¬\2', code)
+        code = re.sub(r'¬(' + con + r')\1', r'\1¬\1', code)
+        code = re.sub(r'¬([𐌻𐌼𐌽𐍂])(' + trucon + ')', r'\1¬\2', code)
+        code = re.sub(r'([𐌱𐌲𐌳𐌺𐍀𐍆])¬([𐌻])', r'¬\1\2', code)
+        code = re.sub(r'([𐌱𐌲𐌳𐌺𐍀𐍆])¬([𐍂])', r'¬\1\2', code)
+        code = re.sub(r'(𐍇𐌹|𐍃𐌹)¬('+vow+')', r'\1\2', code)
+        code = re.sub(r'([𐌱𐍀𐍂])𐍃¬([𐍀𐍄𐌺])', r'\1¬𐍃\2', code)
+        code = re.sub(r'¬(' + con + ')𐌻𐌹>>', r'\1¬𐌻𐌹', code)
+        code = re.sub(r'¬(' + con + '+¬>>)', r'\1', code)
+        code = re.sub(r'¬>>', r'>>', code)
+        code = re.sub(r'<<¬+', r'<<', code)
         code = re.sub(r'¬(' + vow + dia + '?)>>', r'\1>>', code)
         code = re.sub(r'<<(' + trucon + '+' + dia + '?|' + vow + dia + '?)¬', r'<<\1', code)
         code = re.sub(r'(<<|>>)', r'', code)
@@ -363,7 +630,7 @@ def hyphenate_code(code):
 
 def postransliterate(code, posttranssytem):
     new_code = code
-    if posttranssytem == 'SEALAT':
+    if posttranssytem == 'CISALAT':
         transtable = {'А': 'A', 'А̂': 'Â', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D', 'Е': 'E', 'Е̂': 'Ê', 'Ә': 'Ə',
                       'Ә̂': 'Ə̂', 'Ж': 'J', 'З': 'Z', 'Ӡ': 'Đ', 'И': 'I', 'И̂': 'Î', 'Ј': 'Y', 'К': 'K', 'Л': 'L',
                       'М': 'M', 'Н': 'N', 'О': 'O', 'О̂': 'Ô', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'Ꚋ': 'Ŧ',
@@ -379,9 +646,11 @@ def postransliterate(code, posttranssytem):
 
 def convert_code(code, file_path=os.path.join(project_path, 'default.txt'), posttrans=None):
     # print(file_path)
-    code = re.sub(r'\{[^}]+\}\{=([^}]+)\}', r'\1', code)  # {U.S.}{=Ю.С.}
-    code = re.sub(r'&amp;', r'&#38;', code)  # {U.S.}{=Ю.С.}
-    code = re.sub(r'&quot;', r'&#34;', code)  # {U.S.}{=Ю.С.}
+    code = re.sub(r'\{[^}]+\}\{=([^}]+)\}', r'<=/\1/=>', code)  # {U.S.}{=Ю.С.}
+    code = re.sub(r'&amp;', r'&#38;', code)
+    code = re.sub(r'&quot;', r'&#34;', code)
+    code = re.sub(r'&lt;', r'&#60;', code)
+    code = re.sub(r'\{\{([^}]+)\}\}', r'<=/\1/=>', code)  # {{in vitro}}
     code = re.sub(r'\{(\d)\}', r'\1', code)  # use{1}
     code = re.split('(<[^>]+>)', code)
     word_list = list()
@@ -400,22 +669,39 @@ def convert_code(code, file_path=os.path.join(project_path, 'default.txt'), post
             if posttrans:
                 code[n] = postransliterate(code[n], posttrans)
     code = ''.join(code)
+    if system == 'CIRA':
+        code = re.sub(r'-([вдслмр]|нт)\b', chr(0x2011)+r'\1', code)
+    code = re.sub(r'<=/([^}]+?)/=>', r'\1', code)  # {{in vitro}}
+    code = re.sub(r'­’', r'’', code)  # soft hyphens before apostrophes
+    if not hyphenate:
+        code = re.sub(r'­', r'', code)
     return code
 
 
 def convert_file(file_path, posttrans=None, odt=False): # odt: open document text
-    print(posttrans)
+    print('convert_file', file_path)
     with open(file_path, mode='rt', encoding='utf8') as f:
         code = f.read()
     if odt:
-        split_code = re.split(r'(</?office:body>)', code)
+        code = re.sub('<office:binary-data>', '<office:binary-data><', code)
+        code = re.sub('</office:binary-data>', '></office:binary-data>', code)
+        code = re.sub('&quot;', '&#34;', code)
+        code = re.sub('&amp;', '&#38;', code)
+        code = re.sub('&apos;', '&#39;', code)
+        code = re.sub('&lt;', '&#60;', code)
+        code = re.sub('&gt;', '&#62;', code)
+        split_code = re.split(r'(</?office:body>|</?body>)', code)
         split_code[2] = convert_code(split_code[2], posttrans=posttrans)
         code = ''.join(split_code)
+        code = re.sub('<office:binary-data><', '<office:binary-data>', code)
+        code = re.sub('></office:binary-data>', '</office:binary-data>', code)
     else:
         code = convert_code(code, posttrans=posttrans)
-    output_path = re.sub(r'(.*)\.([a-zA-Z0-9]+)', r'\1.Cyr.\2', file_path)
+    output_path = re.sub(r'(.*)\.([a-zA-Z0-9]+)', r'\1.'+system+r'.\2', file_path)
     with open(output_path, mode='wt', encoding='utf8') as f:
         f.write(code)
+    print('Input file:\n', file_path)
+    print('Output file:\n', output_path)
 
 
 def main():
@@ -425,53 +711,57 @@ def main():
     )
 
     file_path = r'/home/hellerick/Dropbox/Lib/Fiction/Stewart, Mary/Stewart, Mary - The Little Broomstick.code.txt'
-    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Vonnegut, Kurt',
-                             'Kurt Vonnegut Welcome to the Monkey House Stories.html')
+    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Vonnegut, Kurt', 'Kurt Vonnegut Welcome to the Monkey House Stories.html')
     file_path = os.path.join('Examples/About_capitalist_employers.txt')
     file_path = os.path.join('Examples/The_Sorceress_of_Karres.fodt')
     file_path = os.path.join("Examples/Pompeo.txt")
+    file_path = os.path.join('/home/hellerick/Documents/Akiba/Ranobe/Suzumiya Haruhi/English/The Intuition of Haruhi Suzumiya.fodt')
+    file_path = os.path.join(dropbox_path, 'Programming', 'Python', 'Translit', 'Ango-Russian_schoolhouse_transcription', 'Examples', 'Gerald Durrell - The Talking Parcel.fodt')
+    file_path = os.path.join('/home/hellerick/Documents/Articles/The Atlantic Charter.fodt')
+    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Azimov, Isaac', 'Asimov, Isaac - Caves of Steel - 1953.fodt')
+    file_path = os.path.join(dropbox_path, 'Lib', 'Fiction', 'Hemingway, Ernest', 'Hemingway - Hills Like White Elephants.txt')
+    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Donaldson, Stephen', 'Donaldson, Stephen - Daughter of Regals.fodt')
+    file_path = os.path.join(dropbox_path, 'Job-shared', 'Lib', 'Azimov, Isaac', 'Asimov, Isaac - Caves of Steel - 1953.fodt')
+    file_path = os.path.join('/home/hellerick/Yandex-Disk/Languages/Alternate writing systems/English reformed Latin script/Brown, Joe David/Paper Moon.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Tsujimura, Mizuki', 'Mizuki Tsujimura - Lonely Castle in the Mirror.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Huxley, Aldous', 'Aldous Huxley - Brave New World (1932).fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Ibbotson, Eva', 'Ibbotson, Eva - Journey to the River Sea.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Herbert, Frank', 'Dune.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Lo, Melinda', 'Malinda Lo - Ash.code.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Bliss, Harper', 'Harper Bliss - A Family Affair.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Waters, Sarah', 'Sarah Waters - Fingersmith.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Bliss, Harper', 'Harper Bliss - Seasons of Love.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Lee, Harper', 'Harper Lee - To Kill a Mockingbird.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Bryant, Kris', 'Kris Bryant - Temptation.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Vonnegut, Kurt', 'Kurt Vonnegut - Cats Cradle.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic script', 'Burgess, Anthony', 'Anthony Burgess - A Clockwork Orange.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Birdsall, Jeanne', 'Jeanne Birdsall - The Penderwicks 1.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English reformed Latin script', 'Reed, Zoe', 'Zoe Reed - Breaking Legacies.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Bradley, Alan', 'Bradley - The Sweetness at the Bottom of the Pie.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic CIRA', 'Jones, Diana Wynne', 'Jones - Howls Moving Castle.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin LIRA', 'Neil Gaiman and Terry Pratchett', 'Good omens.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic CIRA', 'Simmons, Dan', 'Simmons - Hyperion.fodt')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Hayes, Emily', 'Hayes - LLS.fb2')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Cyrillic CIRA', 'Heinlein, Robert A', 'Heinlein - The Door into Summer.fb2')
+    file_path = os.path.join(yandexdisk_path, 'Languages', 'Alternate writing systems', 'English Latin Penderscirpt', 'Berkeley, Anthony', 'Berkeley - Poisoned Chocolates Case.fb2')
 
-    # convert_file(file_path, posttrans='SEALAT')
-    if True:
-        convert_file(file_path, odt=False)
+    print(file_path)
+    # convert_file(file_path, posttrans='CISALAT')
+    if 0:
+        convert_file(file_path, odt=True)
 
-    # print(convert_code('''sometimes'''))
+    else:
+        print(convert_code('''
+The letter Wyn is too similar to the letter P so I don’t like the idea.
+'''))
+
     try:
         print(watch)
     except NameError:
         pass
 
-    if False:
-        print(convert_code("""
-3D printing technology helps combat ongoing epidemic
 
-The coronavirus outbreak has significantly increased the pressure on China’s hospitals as many other types of patients also need medical treatment but wards are limited. 3D printing technology at this time stands out to brace the challenge.
-
-A Shanghai firm can create coronavirus quarantine rooms with 3D printing technology. They’ve made 15 so far, and have donated them to a hospital in Xianning City, Hubei Province.
-
-Winsun Building Technique Company said all their quarantine rooms were put into use last week. Each one measures 10 square meters, big enough for two beds. They meet required standards for heat preservation and isolation, and are designed to withstand strong winds and even earthquakes. The company said they’re easy and cheap to make.
-
-"A quarantine room can be printed in two hours, and one printing machine can produce 15 rooms a day. Its base cost is around 28000 yuan (about 3999 U.S. dollars)," said Ma Yihe, the Chairman at Winsun Building Technique Co.
-
-Winsun said the cost is low because the construction materials are so cheap.
-
-"We use{2} recyclable materials including sand and construction residue. It is very environmentally friendly. When it comes to safety, the structures are at least twice as strong as concrete construction," Ma Yufeng, the marketing manager at Winsun Building Technique Co. further elaborated.
-
-Very mobile and easy to set up, the 3D printed wards can be used as soon as they’re connected to electric power. They’re easy to disinfect, and can be reused when the epidemic ends.
-
-Ma Yihe also introduced that if there’s no further use for the rooms, they can recycle them to build something else. "We’ve been getting donations from other companies to sponsor more rooms."
-
-The company’s 3D printing technology is also being used for other structures including agricultural facilities, industrial parks and some tourist attractions. 
-
-According to the Chinese Mechanical Engineering Society, the market value of 3D printing technology in China will reach 10 billion U.S. dollars in 2023.
-"""))
-
-    '''
-    LIVE
-    USE
-    '''
-
-    # print(hyphenate_code('іу'))
+##    print(hyphenate_code("'petróleum'"))
 
 
 if __name__ == '__main__':
